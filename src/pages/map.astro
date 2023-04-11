@@ -24,25 +24,24 @@ markers.sort(
   title="LearnMYOG Map"
   description="Learn to Make Your Own Gear (MYOG) suppliers aroudn the globe. Your best resources for fabric and hardware to make DIY outdoor backpacks and apparel."
 >
-  <section id="main" class="wrapper style1 align-center">
-    <div class="inner">
-      <h1 style="display:none">MYOG Suppliers</h1>
-      <!-- map.js insert -->
-      <div id="map"></div>
-      <p class="major align-center">⭐️ LearnMYOG Recommended All-Stars</p>
-      <!-- map.js list insert -->
-      <ul id="store-shelf" class="align-left">
-        {
-          markers.map((marker) => (
-            <li class="no-deco">
-              {flags[marker.country] ?? "🏴‍☠️"} {marker.name}
-              {marker.friend ? "⭐️" : null}
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-  </section>
+  <main class="container py-10">
+    <h1 style="display:none">MYOG Suppliers</h1>
+
+    <div id="map" style="height:400px"></div>
+
+    <p class="py-5 text-center text-xl">⭐️ LearnMYOG Recommended All-Stars</p>
+
+    <ul class="columns-1 pl-10 leading-loose md:columns-3">
+      {
+        markers.map((marker) => (
+          <li class="no-deco">
+            {flags[marker.country] ?? "🏴‍☠️"} {marker.name}
+            {marker.friend ? "⭐️" : null}
+          </li>
+        ))
+      }
+    </ul>
+  </main>
 </Layout>
 
 <script>
@@ -85,31 +84,3 @@ markers.sort(
       );
   });
 </script>
-
-<style>
-  #map {
-    height: 400px;
-    z-index: 1;
-  }
-
-  #store-shelf {
-    column-count: 3;
-  }
-
-  .no-deco {
-    line-height: 2em;
-    list-style-type: none;
-  }
-  .no-deco a {
-    text-decoration: none;
-  }
-
-  @media screen and (max-width: 480px) {
-    #store-shelf {
-      column-count: 1;
-    }
-    #map {
-      height: 240px;
-    }
-  }
-</style>

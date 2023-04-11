@@ -1,0 +1,116 @@
+---
+title: Adventure Series Fastpack
+linkTitle: Fastpack
+details:
+  complexity: 3
+  category: gear
+  skills: Torso sizing, shoulder straps, stretch pockets, seam binding, multiple panels and mixed materials, hardware and webbing
+---
+
+import Card from "@/components/ui/Card.astro";
+import CenteredSection from "@/components/ui/CenteredSection.astro";
+import DividedSection from "@/components/ui/DividedSection.astro";
+import PageQuote from "@/components/PageQuote.astro";
+import SimplePattern from "@/components/SimplePattern.astro";
+import PayhipButton from "@/components/PayhipButton.astro";
+
+<SimplePattern
+  title={frontmatter.title}
+  tagline="Hybrid vest-style pack for overnight trailrunning"
+  pictures={[{
+    picture: import("@/images/fastpack/fastpack-hero2.jpg"),
+    title: "Alpine climbing aesthetic with daypack features."
+  }, {
+    picture: import("@/images/fastpack/fastpack-front.jpg"),
+    title: "Cinch collar with removable lid pocket."
+  }, {
+    picture: import("@/images/fastpack/fastpack-back.jpg"),
+    title: "S-Straps with pockets. Also includes Vest Style Straps."
+  }, {
+    picture: import("@/images/fastpack/fastpack3.png"),
+    title: "Vest style straps with soft flask pockets."
+  }, {
+    picture: import("@/images/fastpack/fastpack4.jpg"),
+    title: "Removable foam sit pad and structural frame sheet."
+  }, {
+    picture: import("@/images/fastpack/fastpackstuart.jpg"),
+    title: "Purpose built peakbagging and scrambling pack!"
+  }, {
+    picture: import("@/images/fastpack/fastpack6.png"),
+    title: "Easily carries my ten essentials full day scrambles"
+  }, {
+    picture: import("@/images/fastpack/pattern1.png"),
+    title: "Print at home and large format sewing patterns"
+  }, {
+    picture: import("@/images/fastpack/pattern2.png"),
+    title: "Complete detailed instructions with pack sizing directions"
+  }, {
+    picture: import("@/images/fastpack/cb_sampayne1.jpg"),
+    title: "Sharp Fastpack with Vest straps and fixed sternum straps by Sam Payne"
+  }, {
+    picture: import("@/images/fastpack/cb_sampayne2.jpg"),
+    title: "Contrasting in all the right ways with X-Pac by Sam Payne"
+  }, {
+    picture: import("@/images/fastpack/communitybuildplaceholder.png"),
+    title: "Share your builds and make sure to tag me!"
+  }]}
+>
+
+  <PageQuote>
+    Following the release of our Trail Running Backpack sewing pattern, your number one request was a larger pack for overnight trips.
+    Sporting an alpine climbing aesthetic and our proven vest-style suspension, the Adventure Series Fastpack aims to please.
+  </PageQuote>
+
+  <DividedSection header="Design Features">
+    ### Pack Features
+    - Modern vestlike suspension with soft flask stretch pockets
+    - Flexible frame sheet and dual use foam sit pad
+    - Removable webbing hip belt compatible with climbing harness
+    - Boobies friendly sternum strap spacing in proven vest design
+    - Quick access cinch collar with removable lid pocket
+    - Large volume alpine climbing style pack with streamline taper
+    - Finished pack measures approx 23" x 10" x 6.5"
+
+  </DividedSection>
+
+  <Card>
+    <DividedSection header="Digital Sewing Pattern" >
+      - Print at home pattern suitable for both Letter and A4 sized paper
+      - Large format pattern for 36" roll feed or A0 sized paper
+      - Detailed step-by-step sewing instructions with illustrations
+      - Custom torso sizing with simple directions and minimal modifications
+      - Complete list of materials for a budget build
+      - Video sewalong series showing start-to-finish of a fresh build
+
+      ### Two Variations for Shoulder Strap Construction
+      - Vest-style straps with soft flask water bottle pockets
+      - S-shaped straps with stretch pockets for snacks and InReach
+
+      <PayhipButton amount={30} code="DfIm"/>
+    </DividedSection>
+  </Card>
+
+  <DividedSection header="Fabrics">
+
+    A sampling of fabrics are listed to spark your imagination. **Bold fabrics** were used in the video series.
+
+  | Fabric Panel    | Options                                           | Length (Width)  |
+  |-----------------|---------------------------------------------------|-----------------|
+  | Pack Bottom     | **500D Cordura**, XPac VX-42, 420d Robic          | 0.5 yd (54")    |
+  | Body            | **XPac VX-21 and VX-07**, 210d Robic, 200D Oxford | 0.5 yd (54")    |
+  | Top Collar      | **1.9oz Coated Riptop**, 100d Robic, Hex 70       | 0.5 yd (60")    |
+  | Stretch Pockets | **Heavy Lycra**, Spandura, Duraweave              | 12 inches (60") |
+
+    Learn more about technical fabrics, recommendations, and trusted suppliers in our [Fabrics Guide](/article/fabrics).
+    Similar to our Trail Running Pack, the recommended soft flask bottle is
+    the [HydraPak UltraFlask 600 ML](https://hydrapak.com/collections/soft-flasks/products/ultra-flask-600-ml).
+  </DividedSection>
+
+  <CenteredSection >
+    # Sewalong Tutorials
+
+    TODO
+  </CenteredSection>
+
+</SimplePattern>
+

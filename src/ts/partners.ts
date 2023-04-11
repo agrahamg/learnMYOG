@@ -5,6 +5,7 @@ export const partnerInfos = {
     linkFn: (product: string) =>
       `https://ripstopbytheroll.com/products/${product}?rfsn=4608557.2d546b9`,
     image: import("@/images/shared/partners/200/RBTR.webp"),
+    smallImage: import("@/images/shared/partners/48/rbtr.png"),
   },
   discoveryfabrics: {
     label: "Discovery Fabrics",
@@ -21,6 +22,7 @@ export const partnerInfos = {
     link: "https://www.questoutfitters.com/",
     linkFn: (product: string) => `https://www.questoutfitters.com/${product}`,
     image: import("@/images/shared/partners/200/questoutfitters.webp"),
+    smallImage: import("@/images/shared/partners/48/quest.png"),
   },
   adventurexpert: {
     label: "AdventurExpert",
@@ -33,6 +35,7 @@ export const partnerInfos = {
     label: "Wawak",
     link: "https://www.wawak.com/",
     image: import("@/images/shared/partners/200/wawak.webp"),
+    smallImage: import("@/images/shared/partners/48/wawak.png"),
   },
   therainshed: {
     label: "The Rainshed",
@@ -49,15 +52,10 @@ export const partnerInfos = {
   amazon: {
     label: "Amazon.com",
     image: import("@/images/shared/partners/200/amazon.webp"),
+    smallImage: import("@/images/shared/partners/48/amazon.png"),
     link: "https:amazon.com/",
     linkFn: (product: string) => `https://amzn.to/${product}`,
   },
-} as Record<
-  string,
-  {
-    label: string;
-    link: string;
-    image: any;
-    linkFn?: (product: string) => string;
-  }
->;
+} as const;
+
+export type PartnerKeys = keyof typeof partnerInfos;

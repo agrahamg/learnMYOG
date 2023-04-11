@@ -1,0 +1,163 @@
+---
+title: "Chonky Sling"
+---
+
+import Card from "@/components/ui/Card.astro";
+import DividedSection from "@/components/ui/DividedSection.astro";
+import SimplePattern from "@/components/SimplePattern.astro";
+import Partners from "@/components/Partners.astro";
+import SmallPartnerLogo from "@/components/SmallPartnerLogo.astro";
+import PayhipButton from "@/components/PayhipButton.astro";
+import Disclosure from "@/components/Disclosure.astro";
+import { Image } from "@astrojs/image/components";
+
+<SimplePattern
+  title={frontmatter.title}
+  pictures={[{
+    picture: import("@/images/chonkysling/sling5.jpg"),
+    title: "Chonky Sling with exterior bottle pocket and 3D front panel"
+  }, {
+    picture: import("@/images/chonkysling/sling7.jpg"),
+    title: "Self-compressing ambidextrous sling bag"
+  }, {
+    picture: import("@/images/chonkysling/snowday.jpg"),
+    title: "Chonky Sling prototype in 500d Cordura"
+  }, {
+    picture: import("@/images/chonkysling/snowday2.jpg"),
+    title: "Chonky Sling prototype on snowy day hike"
+  }, {
+    picture: import("@/images/chonkysling/sling3.jpg"),
+    title: "Two straps in pattern, this one is more adventurous."
+  }, {
+    picture: import("@/images/chonkysling/olivehero3.jpg"),
+    title: "Foam panels add structure, shown with casual strap"
+  }, {
+    picture: import("@/images/chonkysling/olivesling3.jpg"),
+    title: "Self compressing strap with no fiddly adjusters"
+  }, {
+    picture: import("@/images/chonkysling/olivesling4.jpg"),
+    title: "Bottle pocket makes carrying water enjoyable"
+  }, {
+    picture: import("@/images/chonkysling/sling6.jpg"),
+    title: "Fully lined with a self-made MYOG label :)"
+  }, {
+    picture: import("@/images/chonkysling/sling1.jpg"),
+    title: "Everyday Fanny Pack is swallowed by Chonky Sling"
+  }, {
+    picture: import("@/images/chonkysling/sling2.jpg"),
+    title: "EDC commute ready"
+  }, {
+    picture: import("@/images/chonkysling/sling4.jpg"),
+    title: "Tested well as carry-on and travel bag"
+  }, {
+    picture: import("@/images/chonkysling/instructions.png"),
+    title: "Snapshot of suggested materials included within instructions"
+  }, {
+    picture: import("@/images/chonkysling/instructions2.png"),
+    title: "Detailed construction notes. See below for high res photos of key steps."
+  }]}
+  buildPictures={import.meta.glob("../../images/chonkysling/build/*.jpg")}
+>
+  <article class="youtube" slot="gallery">
+    <a
+      href="https://www.youtube.com/embed/jeW5VaxLBLs"
+      class="image"
+      data-poptrox="iframe,436x775"
+    >
+      <Image
+        alt="Chonky Sling dimensions and hardware"
+        src={import("@/images/chonkysling/launchgraphic.jpg")}
+        format="webp"
+        height={400}
+        aspectRatio="1:1"
+        fit="cover"
+      />
+      <div class="play-button"/>
+    </a>
+  </article>
+
+  <DividedSection header="Design Features">
+
+    When the venerable Everyday Fanny Pack just won't do, reach for the Chonky Sling.
+
+    - Symmetrical shape and removable strap for ambidextrous wear
+    - 3D front zipper pocket and internal organization pockets
+    - Inspired strap system self compresses the bag without fiddly adjusters or hooks
+    - External stretchy bottle pocket with secure cord channel
+    - Foam lined side, bottom, and back panels for structure and padding precious cargo
+    - Thicc! Over 6L capacity with additional volume in front and bottle pockets
+    - Easily customizable internal organizers, cell dividers, or external attachments
+
+    ### Bag Size
+
+    - Main compartment measures approximately 7 x 14 x 4 inches (18 x 36 x 10 cm)
+    - Bottle pocket is designed for 24 fl oz smartwater® bottle but is easily adjustable in length
+
+    ### Sewing Skill Level - Intermediate to Advanced
+
+    Chonky Sling is a challenging project as you'll be sewing multiple slippery fabric layers, zippers with linings,
+    shaping darts, working around floating foam panels, and precisely sewing curved seams. Chonky Sling can of course be
+    simplified to suit your skill level and tools by omitting linings and foam panels but where's the fun in that?
+
+    That said, a poor maker blames their tools. I'm sure an experienced bag maker can work through this project. A walking
+    foot attachment and extension table is recommended. While the instructions detail every step, familiarity with sewing
+    terms and construction techniques is expected. If comfortable making the [Everyday Fanny Pack](/fanny-pack)
+    and/or the [Bikepacking Frame Bag set](/framebags), the Chonky Sling provides a nice progression in skill.
+
+  </DividedSection>
+
+  <Card>
+    <DividedSection header="Digital Sewing Pattern" >
+      - Comprehensive step-by-step sewing instructions with construction photos
+      - Cut layout, material yardages, and hardware list
+      - Two shoulder strap options, one casual and one adventurous
+      - Multiple PDF paper sizes for printing convenience
+      - Print at home on 8.5x11 inch Letter or A4 sized paper
+      - Print at office on 11x17 inch tabloid or A3 sized paper
+      - Print at copy shop on one 36x48 inch or A0 sized sheet
+      - Seam allowances included for all pattern panels and sizes
+
+      <PayhipButton amount={20} code="3Xa2b"/>
+
+      During checkout, enable the option to allow me to send product updates (EU).
+    </DividedSection>
+  </Card>
+
+  <DividedSection header="Fabrics" class="prose-td:align-middle">
+
+  | Material               | Description                                              | Length (Width) | Links                                                                                                                |
+  |------------------------|----------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------|
+  | Main Fabric            | ECOPAC EPX200, a recycled laminated pack fabric          | 1/2 yd (58")   | <SmallPartnerLogo partner="ripstopbytheroll" link="https://ripstopbytheroll.com/pages/ecopak?rfsn=4608557.2d546b9"/> |
+  | Lining Fabric          | Lighter weight coated nylon ripstop for ease of cleaning | 1/2 yd (58")   | <SmallPartnerLogo partner="ripstopbytheroll" product="1-1-oz-silnylon"/>                                             |
+  | Stretch Bottle Pocket  | Venom UL Stretch Mesh or a heavy lycra Duraweave         | 8" (12")       | <SmallPartnerLogo partner="ripstopbytheroll" product="3d-spacer-mesh-1-8"/>                                          |
+  | Shoulder Strap Padding | 1/8" 3D Spacer Mesh                                      | 4" (18")       | <SmallPartnerLogo partner="ripstopbytheroll" product="venom-ul-stretch-mesh"/>                                       |
+  | Foam Sheets            | 2-3mm thick closed cell foam e.g. EVA foam               | 12" (30")      | <SmallPartnerLogo partner="amazon" product="3VmqXgQ"/>                                                               |
+
+    <Disclosure/>
+
+    The pattern instructions includes a **comprehensive material list** including recommended hardware, zippers, and webbing.
+    See [Technical Fabrics](article/fabrics) for more options and details about pack fabrics, linings, and foam.
+
+    ### Suggested needle and thread pairing
+    <ul class="alt">
+      <li>🪡 Microtex or Jeans/Denim Needle, size 90/14</li>
+      <li>🧵 Gutermann MARA 70 - Tex 40 polyester thread</li>
+    </ul>
+
+    <Partners partners={["ripstopbytheroll", "wawak", "amazon"]}/>
+
+  </DividedSection>
+
+  <article class="youtube">
+    <a href="https://youtu.be/4EJunaaXNJs" target="_blank" rel="noopener">
+      <Image
+        alt="sewalong"
+        src={import("@/images/chonkysling/yt-thumb.jpg")}
+        format="webp"
+        height={300}
+      />
+      <div class="play-button"></div>
+    </a>
+    <div class="caption">Chonky Sling Tips &amp; Tricks</div>
+  </article>
+</SimplePattern>

@@ -1,0 +1,69 @@
+---
+import { Image } from "@astrojs/image/components";
+import GeneratorForm from "@/components/GeneratorForm.astro";
+---
+
+<div class="flex items-start">
+  <div class="flex flex-col">
+    <Image
+      format="webp"
+      width={225}
+      height={175}
+      src={import("@/images/zipsack/zipPouchPlan.png") as any}
+      alt="fabric"
+      class="m-0 mr-5 rounded-lg"
+    />
+  </div>
+  <div>
+    <p>
+      This pattern generator details the 2D fabric panel sized needed to achieve
+      desired 3D dimensions of a rectangular zip pouch. Referencing the image,
+      provide the desired dimensions for finished size pouch.
+    </p>
+    <GeneratorForm
+      fields={{ length: "Length", width: "Width", height: "Height" }}
+    />
+
+    <Image
+      format="webp"
+      width={225}
+      height={175}
+      src={import("@/images/zipsack/zipPouchPattern.png") as any}
+      alt="fabric"
+      class="float-right rounded-lg"
+    />
+
+    <p>
+      Seam Allowances: 3/8" (1 cm) typical with 1/2" (1.3 cm) Zipper Allowance
+    </p>
+
+    <div class="font-bold">
+      <div>
+        Fabric Width: <span class="patternWidth"></span>
+      </div>
+      <div>
+        Fabric Height: <span class="patternHeight"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { init } from "@/ts/patternGenerators";
+
+  init(function (
+    isMetric: boolean,
+    fields: { width: number; height: number; length: number }
+  ) {
+    let { width, height, length } = fields;
+
+    const { channelSa, generalSa } = isMetric
+      ? { channelSa: 1.3, generalSa: 1 }
+      : { channelSa: 0.5, generalSa: 0.375 };
+
+    return {
+      patternWidth: 2 * width + 2 * height + 2 * channelSa,
+      patternHeight: length + height + 2 * generalSa,
+    };
+  });
+</script>

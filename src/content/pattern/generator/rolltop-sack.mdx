@@ -1,0 +1,150 @@
+---
+layout: "@/layouts/Markdown.astro"
+title: Roll-Top Stuff Sack Pattern Generator
+---
+import CenteredSection from "@/components/ui/CenteredSection.astro";
+import DividedSection from "@/components/ui/DividedSection.astro";
+import Card from "@/components/ui/Card.astro";
+import { Image } from "@astrojs/image/components";
+import CinchSack from "@/components/generator/CinchSack.astro"
+
+<Card class="prose max-w-none">
+  # {frontmatter.title}
+  <CinchSack/>
+</Card>
+
+
+
+<CenteredSection>
+  # Assembly Instructions
+
+  <DividedSection header="Materials">
+    See our <a href="article/fabrics">Fabrics Guide</a> for technical fabrics, recommendations, and trusted vendors.
+
+      Medium-weight fabric such as HyperD 300 or 200d Ripstop Nylon work great for water resistant gear storage.
+
+      - This project only uses one fabric panel: Body panel.
+      - One **<span class="webbingLength">long</span>** piece of 3/4" (20mm) webbing.
+      - One side release buckle compatible with the webbing.
+      - One 4 inch (10 cm) piece of narrow webbing or ribbon.
+
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Body Panel">
+    <Image
+      format="webp"
+      width={225}
+      aspectRatio="1/1"
+      src={import("@/images/rolltopsack/rt2.jpg")}
+      alt="Body panel markings"
+      class="float-right rounded-lg"
+    />
+
+    1. Measure and cut one fabric Body Panel. **Length: <span class="patternLength"/>** and **Height: <span class="patternHeight"/>**.
+    1. On wrong side of fabric, mark the midpoint of the panel along the bottom edge.
+    1. Parallel the top edge, mark the **<span class="hem"/>** hem line from left to right side.
+
+    In the illustrations, the fabric's wrong side is light blue.
+
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Roll-Top Collar">
+    <Image
+      format="webp"
+      width={225}
+      aspectRatio="1/1"
+      src={import("@/images/rolltopsack/rt3.jpg")}
+      alt="Roll-top collar prep"
+      class="float-right rounded-lg"
+    />
+
+
+    1. Double fold a hem over the **<span class="hem"/>** hem line and sew.
+    1. On the right side of Body Panel fabric, mark the midpoint of the hem.
+    1. Center align webbing on top of hem. Clip in place at midpoint.
+    1. Arrange buckle hardware and fold under webbing. Clip in place.
+    1. Tip: Double check your hardware orientation is right side out (RSO)!
+    1. Ensure the length of webbing from folded end-to-end is slightly longer than **<span class="halfTop"/>**.
+    1. Stitch webbing along hem. Parallel stitch lines along top and bottom edges of webbing suffice.
+    1. Reinforce buckle hardware with bar tack or box stitch. Repeat opposite side.
+
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Body Seams">
+    <Image
+      format="webp"
+      width={225}
+      aspectRatio="1/1"
+      src={import("@/images/rolltopsack/rt4.jpg")}
+      alt="Stitch side and bottom"
+      class="float-right rounded-lg"
+    />
+
+
+    1. Fold the Body Panel in half, right sides out (RSO), aligning left and right edges.
+    1. Stitch the Body Panel sides together for a french seam. RSO, sew with less than half of the **<span class="sA"/>** seam allowance.
+    1. Flip right sides together (RST) and complete the french seam. RST, sew using the remainder of the **<span class="sA"/>** seam allowance.
+    1. Tip: If you machine struggles to sew thru two double fold hems, trim away some of the inner most fabric within the hem.
+    1. Flip the bag right side out (RSO) and center align the side seam.
+    1. Stitch the Body Panel bottom together for a french seam. RSO, sew with less than half of the **<span class="sA"/>** seam allowance.
+    1. Flip right sides together (RST) and center align a small loop of webbing, sandwiched inside Body Panel. Clip in place.
+    1. Complete the french seam. RST, sew using the remainder of the **<span class="sA"/>** seam allowance.
+    1. Reinforce the webbing loop with a few back stitches.
+
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Squaring the Bottom">
+    <Image
+      format="webp"
+      width={225}
+      aspectRatio="1/1"
+      src={import("@/images/rolltopsack/rt5.jpg")}
+      alt="Sew squared corners"
+      class="float-right rounded-lg"
+    />
+
+
+    1. Blow a little air into the stuff sack and press the sides in to form sharp 90 degree corners.
+    1. With the bottom seam finger pressed flat and straight, draw a mark from the left
+      - 1/2 Bottom Width = **<span class="halfBottomWidth"/>**
+      - Bottom Length = **<span class="bottomLength"/>**
+      - 1/2 Bottom Width **<span class="halfBottomWidth"/>** should remain.
+    1. At first mark, draw a **<span class="bottomWidth"/>** line (Bottom Width) perpendicular and centered on bottom seam.
+    1. Repeat same on vertical line at other mark.
+    1. The bottom should look like the image ->
+    1. Stitch along the vertical lines forming the rectangular bottom.
+    1. Before trimming off the corners, flip right side out (RSO) to check for overall symmetry and desired size.
+    1. Trim the corners off about 1/2" (1 cm) from the seam. If your fabric frays, overcast or edge bind the raw edges.
+
+
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Finishing Up">
+    <Image
+      format="webp"
+      width={225}
+      aspectRatio="1/1"
+      src={import("@/images/rolltopsack/rtsample2.jpg")}
+      alt="two roll-top bags"
+      class="float-right rounded-lg"
+    />
+
+    1. Flip the roll-top sack right side out (RSO).
+    2. Roll the top edge down three or four times using the webbing as a guide. Secure the quick release buckle.
+
+    <h4>👏 Congrats on making your own custom roll-top storage sack!</h4>
+    If you want to try another style, check out the <a href="/pattern/generator/rolltop-sack">Round Bottom Stuff Sack</a>!
+
+
+  </DividedSection>
+</CenteredSection>

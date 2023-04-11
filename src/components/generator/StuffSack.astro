@@ -1,0 +1,86 @@
+---
+import { Image } from "@astrojs/image/components";
+import GeneratorForm from "@/components/GeneratorForm.astro";
+---
+
+<div class="flex items-start">
+  <div class="flex flex-col">
+    <Image
+      format="webp"
+      width={225}
+      aspectRatio="1/1"
+      src={import("@/images/stuffsack/stuffSackPlan.png") as any}
+      alt="stuff sack plan"
+      class="m-0 mr-5 rounded-lg"
+    />
+  </div>
+  <div>
+    <p>
+      This pattern generator is for custom-sized round bottom stuff sacks with a
+      drawstring cinch. From your 3D dimensions, the generator does the math so
+      you never waste fabric or time. Referencing the illustration, provide the
+      desired dimensions for a finished stuff sack.<br />
+      If this is your very first time sewing, I recommend starting with <a
+        href="/pattern/generator/cinch-sack">Cinch Sack</a
+      >.
+    </p>
+
+    <GeneratorForm fields={{ diameter: "Diameter", height: "Height" }} />
+
+    <Image
+      format="webp"
+      width={225}
+      height={175}
+      src={import("@/images/zipsack/zipPouchPattern.png") as any}
+      alt="fabric"
+      class="float-right rounded-lg"
+    />
+
+    <p>
+      Seam Allowances: 3/8" (1 cm) typical with 1/2" (1.3 cm) Zipper Allowance
+    </p>
+
+    <p>
+      A standard <b>3/8 inch (1 cm) construction seam allowance</b> is included and
+      used throughout.<br />
+      Cord Channel Allowance of 1.5" (4 cm) is provided. <br /> See drawstring details
+      below.
+    </p>
+
+    <ul class="alt">
+      <li><strong>Panel Width: <span class="patternWidth"></span></strong></li>
+      <li>
+        <strong>Panel Height: <span class="patternHeight"></span></strong>
+      </li>
+      <li>
+        <strong>Circle Radius: <span class="patternRadius"></span></strong>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  import { init } from "@/ts/patternGenerators";
+
+  function calculate(
+    isMetric: boolean,
+    fields: { diameter: number; height: number }
+  ) {
+    let { diameter, height } = fields;
+
+    const { channelSa, generalSa } = isMetric
+      ? { channelSa: 4, generalSa: 1 }
+      : { channelSa: 1.5, generalSa: 0.375 };
+
+    let patternDiameter = diameter + 2 * generalSa;
+
+    return {
+      patternDiameter,
+      patternRadius: patternDiameter / 2,
+      patternWidth: Math.PI * diameter + 2 * generalSa,
+      patternHeight: height + generalSa + 0.5 * diameter + channelSa,
+    };
+  }
+
+  init(calculate);
+</script>

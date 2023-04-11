@@ -1,0 +1,22 @@
+---
+type Props = {
+  code: string;
+  amount: number;
+};
+
+const { code, amount } = Astro.props;
+const icon = `fa-${amount === 0 ? "file-download" : "credit-card"}`;
+---
+
+<a
+  href={`https://payhip.com/b/${code}`}
+  class="rounded-full bg-black px-8 py-4 text-white no-underline transition-colors hover:bg-[var(--banner)]"
+  target="_blank"
+>
+  <span class={`${icon} fa pr-1`}></span>
+  ${amount}
+</a>
+
+<p>
+  Valid email address required for download link and revision notifications.
+</p>

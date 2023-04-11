@@ -1,6 +1,7 @@
 ---
 import { Image } from "@astrojs/image/components";
 import { partnerInfos } from "@/ts/partners";
+import Partner from "./Partner.astro";
 
 type PartnerType = keyof typeof partnerInfos;
 
@@ -12,20 +13,8 @@ let { partners } = Astro.props;
 partners = partners ?? (Object.keys(partnerInfos) as PartnerType[]);
 ---
 
-{
-  partners.map((partnerKey) => {
-    const { label, link, image } = partnerInfos[partnerKey];
-
-    return (
-      <a href={link} target="_blank" style="margin:0.5rem;">
-        <Image
-          class="partner desaturated"
-          src={image as any}
-          alt={label}
-          style="width:auto;"
-        />
-        <span class="label">{label}</span>
-      </a>
-    );
-  })
-}
+<div
+  class="not-prose flex flex-col items-center justify-center gap-5 sm:flex-row"
+>
+  {partners.map((partner) => <Partner partner={partner} />)}
+</div>

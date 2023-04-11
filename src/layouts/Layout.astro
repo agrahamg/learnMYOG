@@ -9,10 +9,9 @@ description =
   description ||
   "Learn to Make Your Own Gear (MYOG). DIY sewing patterns for backpacks, technical apparel, and outdoor adventurers.";
 
-import "@/assets/css/main.css";
-import "@fortawesome/fontawesome-free/css/all.css";
+import "../assets/css/main.css";
 import Footer from "@/components/navigation/Footer.astro";
-import Header from "@/components/navigation/Header.astro";
+import Header from "../components/navigation/NavHeader.astro";
 import Nav from "@/components/navigation/Nav.astro";
 import { getColors } from "@/ts/colors";
 ---
@@ -48,16 +47,14 @@ import { getColors } from "@/ts/colors";
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript
     >
   </head>
-  <body class="is-preload">
+  <body class="is-preload font-light prose-headings:font-light">
     <Header />
 
-    <div id="wrapper" class="divided">
-      <slot name="nav">
-        <Nav />
-      </slot>
+    <slot name="nav">
+      <Nav />
+    </slot>
 
-      <slot />
-    </div>
+    <slot />
 
     <Footer />
   </body>

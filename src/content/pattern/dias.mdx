@@ -1,0 +1,153 @@
+---
+title: Do It All Shorts
+description: DIY Patagonia Baggies sewing pattern.
+details:
+  complexity: 1
+  complexityIcon: 🩳
+  category: apparel
+  skills: Inseam pockets, welt pocket, elastic waist and hemming, basic seam finishing, buttonholes
+---
+
+import Card from "@/components/ui/Card.astro";
+import DividedSection from "@/components/ui/DividedSection.astro";
+import Partners from "@/components/Partners.astro";
+import PayhipButton from "@/components/PayhipButton.astro";
+import SimplePattern from "@/components/SimplePattern.astro";
+
+<SimplePattern
+  title={frontmatter.title}
+  tagline="Our versatile fleece Pullover Hoodie is an essential mid-layer suited for casual adventures"
+  pictures={[{
+    picture: import("@/images/dias/bhwalk.jpg"),
+    title: "Fast drying DIAS, perfect for river days"
+  }, {
+    picture: import("@/images/dias/bhcover2.jpg"),
+    title: "5 inch inseam DIAS in Supplex Solarweave"
+  }, {
+    picture: import("@/images/dias/bhwelt.jpg"),
+    title: "Low profile tailored pockets on back"
+  }, {
+    picture: import("@/images/dias/blhero.jpg"),
+    title: "DIAS in 2-ply Supplex Nylon with an 7 inch inseam"
+  }, {
+    picture: import("@/images/dias/blback.jpg"),
+    title: "Secure back pocket with help of a plastic KAM snap"
+  }, {
+    picture: import("@/images/dias/yellowhero.jpg"),
+    title: "Early prototype DIAS in 2-ply Supplex. Yellow is a bit too sheer."
+  }, {
+    picture: import("@/images/dias/blgusset.jpg"),
+    title: "Single piece crotch gusset for mobility and comfort"
+  }, {
+    picture: import("@/images/dias/blpockets.jpg"),
+    title: "Back pocket includes optional security of a snap flap"
+  }, {
+    picture: import("@/images/dias/bltag.jpg"),
+    title: "Old shoelaces make excellent drawstrings"
+  }, {
+    picture: import("@/images/dias/patterncard.png"),
+    title: "Pattern overview and sizing"
+  }, {
+    picture: import("@/images/dias/sampleinstructions.png"),
+    title: "Detailed instructions with construction photos and illustrations."
+  }]}
+  buildPictures={import.meta.glob("../../images/dias/build/*.jpg")}
+>
+
+  <DividedSection header="Design Features">
+    First released in 1982, Patagonia® Baggies™ have been a summer staple for 40 years.
+    Inspired by the classics, but with a modern shake, let DIAS be your next make. 🤙
+
+    - Classic style outdoor shorts with regular rise and casual straight fit
+    - Full length crotch gusset for range of motion and squat comfort
+    - Deep hand pockets that won't flip out with an inner iPhone pocket
+    - One or two back pockets with or without a secure snap flap
+    - Drawcord and elastic waistband constructed to allow for future replacement
+
+    ### Garment Fit
+
+    DIAS are designed with a casual straight fit and standard rise. Compared to Patagonia® Baggies™, DIAS are slightly less
+    baggy around the hips and thigh for a more trim shape. Referencing the photo gallery, I'm 6'0" tall, 170 lbs, 39"
+    full-hip and wearing a size 40. I typically wear a men's medium. While a 5" inseam is standard, easily extend or short
+    with included illustrated instructions for inseam and rise fit.
+
+    ### Body Measurements
+
+    The sewing pattern covers a wide range of sizes corresponding to XS to XXL. Full hip/seat is the main sizing
+    measurement, the maximum horizontal circumference around hips and butt.
+
+  | Body Measurement (inches) | 32-34 | 35-37 | 38-40 | 41-43 | 44-46 | 47-49 |
+  |---------------------------|-------|-------|-------|-------|-------|-------|
+  | Full Hip (Seat)           | 32-34 | 35-37 | 38-40 | 41-43 | 44-46 | 47-49 |
+  | Pant-Waist                | 28-29 | 30-32 | 33-35 | 36-38 | 40-43 | 45-47 |
+  | Mid Thigh                 | 18.5  | 19.5  | 20.5  | 22.5  | 24.5  | 26.5  |
+
+    ### Sewing Skill Level - Confident Beginner
+
+    DIAS have been designed for confident beginners. Apparel can be intimidating so this base pattern is low complexity and
+    uses modest materials. An optional welt pocket on the back of the shorts is provided for intermediate sewers and a
+    household steam iron is recommended. While a beginner can make this project, familiarity with sewing and basic
+    construction techniques is expected. Serging simplifies construction however an overcast stitch, french seams, or flat
+    felled seams are alternative methods to finish raw edges.
+
+
+  </DividedSection>
+
+  <Card>
+    <DividedSection header="Digital Sewing Pattern">
+      - Complete step-by-step sewing instructions with detailed photos
+      - Cut layout, materials, sizing recommendations, and custom fit adjustments
+      - Comfort straight fit with six typical ready to wear sizes
+      - Illustrated instructions for shortening or lengthening inseam and rise
+      - Multiple PDF paper sizes for printing convenience
+        - Print at home on 8.5x11 inch Letter or A4 sized paper
+        - Print at office on 11x17 inch tabloid or A3 sized paper
+        - Large format on one 36"x48" or A0 sized sheet
+      - Recommended seam allowances included for all pattern panels and sizes
+
+      <PayhipButton amount={20} code="a7bcJ"/>
+    </DividedSection>
+  </Card>
+
+  <DividedSection header="Fabrics">
+
+    For the classic look and feel, Supplex Nylon with durable water repellant (DWR) finish will make fast drying, sun
+    protective, and long-lasting
+    shorts. [Quest Outfitters](https://www.questoutfitters.com/uncoated_fabrics.htm#SUPPLEX), [Discovery Fabrics](https://discoveryfabrics.com/products/supplex-nylon-woven),
+    and [The Rainshed](https://www.therainshed.com/shop/Fabrics/UNCOATED-FABRICS/Supplex-Nylon) have a great selection of
+    Supplex woven fabric also generically known as taslan.
+
+    Lightweight stretch woven fabric with DWR and low spandex content are perfect for bouldering or trail riding. Check
+    out 'Surfer' available
+    at [Discovery Fabrics](https://discoveryfabrics.com/collections/summer-styles-stay-cool/products/stretch-woven-water-repellent).
+
+    <Partners partners={["discoveryfabrics", "therainshed", "questoutfitters"]}/>
+
+  | Material             | Recommended                                                                                                                                                                                                                             | Length (Width)                             |
+  |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|
+  | Shell Fabric         | Supplex Nylon or Durable Stretch Woven, see trusted vendors                                                                                                                                                                             | 1.5 yd (58")                               |
+  | Fusible Interfacing  | Lightweight fusible interfacing such as [Pellon PLF36](https://pellonprojects.com/products/plf36-fusible-interfacing/)                                                                                                                  | 15" (15")                                  |
+  | Waistband Elastic    | 1 inch wide 'non-roll' woven elastic [Discovery Fabrics](https://discoveryfabrics.com/products/elastic-woven?variant=39483898167381) or [The Rainshed](https://www.therainshed.com/shop/c/p/1-inch-NonRoll-Elastic-Black-x17434908.htm) | Pant-waist circumference                   |
+  | Waistband Drawcord   | Salvaged cord, [Flat cord](https://www.therainshed.com/shop/Narrow-Materials/CORDING/Flat-Drawstring/p/14-inch-Flat-Polyester-Cord-Black-x18833686.htm) or my preference... an old shoe lace                                            | 8-10" longer than pant-waist circumference |
+  | Snap Flap (Optional) | [Plastic KAM snap](https://ripstopbytheroll.com/products/kam-snaps?rfsn=4608557.2d546b9), velcro, or other fastener                                                                                                                     | One per pocket                             |
+
+    Suggested needle and thread pairing for this project is:
+
+    - 🪡 Universal or Microtex 80/12 needles
+    - 🧵 Gutermann All-Purpose (MARA 100) Tex 30 polyester thread.
+
+    2-ply Supplex makes great running or paddleboard shorts, but lighter colors like yellow tend to be a bit sheer. 4-ply is
+    more durable and has a hand feel closer to the original Patagonia® Baggies™. High res comparison of fabric textures can
+    be seen in Detailed Build Photos 👇🏽
+
+    Measured weight of shorts, all size medium by inseam and fabric type:
+
+    - 7.5oz Patagonia Baggies 5" originals (4-ply Supplex)
+    - 5.6oz black DIAS 7" (2-ply Supplex)
+    - 4.9oz Patagonia Baggie Lights 6.5" (polyester)
+    - 4.5oz blue DIAS 5" (Supplex Solarweave)
+    - 3.5oz yellow DIAS 5" (2-ply Supplex)
+
+  </DividedSection>
+
+</SimplePattern>

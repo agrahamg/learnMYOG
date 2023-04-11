@@ -1,0 +1,90 @@
+---
+title: Frame Bags
+linkTitle: Bikepacking Frame Bags
+details:
+  complexity: 2
+  category: gear
+  skills: Tight corners and curves, zippers, and foam linings
+---
+
+import Card from "@/components/ui/Card.astro";
+import DividedSection from "@/components/ui/DividedSection.astro";
+import PageQuote from "@/components/PageQuote.astro";
+import PayhipButton from "@/components/PayhipButton.astro";
+import SimplePattern from "@/components/SimplePattern.astro";
+
+<SimplePattern
+  title={frontmatter.title}
+  tagline="Three DIY Bikepacking Bags"
+  pictures={[{
+    picture: import("@/images/framebags/framebags.jpg"),
+    title: "Three bags included. Half Frame Bag and two Top Tube Bags."
+  }, {
+    picture: import("@/images/framebags/bike.jpg"),
+    title: "MYOG kit shaping up. Frame bags with matching pair of stem bags."
+  }, {
+    picture: import("@/images/framebags/hero.jpg"),
+    title: "Front and rear top tube bags for snacks, tools, and smalls."
+  }, {
+    picture: import("@/images/framebags/adjustments.jpg"),
+    title: "Visual instructions for customizing to fit different bike geometries."
+  }]}
+>
+
+  <PageQuote>
+    Gearing up for a bikepacking trip shouldn't cost an arm and a leg.
+    This pattern set includes a Half Frame Bag and two distinct Top Tube bags.
+    Make three custom bikepacking frame bags with less than a yard of X-Pac!
+  </PageQuote>
+
+
+  <DividedSection header="Design Features">
+
+    - Confident beginner-friendly patterns for three bikepacking bags with no special tools.
+    - Large front Top Tube bag fits an iPhone 12 Pro with ease along with tons of snacks.
+    - Rear Top Tube bag carries tools, pump, and an emergency spare.
+    - Half Frame Bag engulfs gear like a jacket, wallet, keys, lunch, stove, and smalls.
+    - Foam-sandwiched panels provide rigid bags that free-stand and protect your frame.
+    - Lined interiors with bright fabric for visibility and easy cleaning.
+    - All three bags are constructed in similar fashion for consistency and minimal fabric.
+
+  </DividedSection>
+
+  <Card>
+    <DividedSection header="Digital Sewing Pattern">
+
+      - Print at home pattern suitable for both Letter and A4 sized paper
+      - Detailed step-by-step sewing instructions
+      - Visual instructions for modifying Half Frame Bag to custom bike geometries
+      - Perfectly sized foam and liner patterns for rigid, free-standing bags
+      - Complete list of materials for a budget build
+      - Sewalong video showing step-by-step construction methods
+
+      <PayhipButton amount={15} code="PhKsR"/>
+    </DividedSection>
+  </Card>
+
+  <DividedSection header="Fabrics">
+    Learn more about technical fabrics, recommendations, and trusted vendors in our new [Fabrics Guide](article/fabrics)
+
+    - Less than a yard of sturdy body fabric such as Cordura 500d or X-PAC
+    - Lightweight lining fabric. Bright and waterproof. Silnylon or PU Coated Ripstop
+    - 1/8" (3mm) EVA foam. Grab the 13"x39" sheets available on [Amazon](https://www.amazon.com/dp/B07BL1R9R7?ref=nb_sb_ss_w_as-ypp-rep_ypp_rep_k2_1_11&crid=104FNZPFS7SXT&sprefix=3mm+eva+foa).
+    - YKK #5 coil zipper or Uretek for added water-resistance
+    - 3/4" (20mm) sewable hook and loop (non-adhesive velcro)
+    - Optional: paracord for frame bag lacing instead of velcro
+
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Bikepacking Series">
+    Kit out your bike with more MYOG patterns from [LearnMYOG.com](https://www.learnmyog.com/)
+
+    - Comfortably pedal with our 4.5L [Bikepacking Hip Pack](/pattern/hip-pack) with Flex Belt
+    - Expand your cockpit storage with a custom [Stem Bag (aka Feed Bag)](/pattern/stem-bag)
+    - Additional bikepacking kit patterns coming soon!
+
+  </DividedSection>
+
+</SimplePattern>

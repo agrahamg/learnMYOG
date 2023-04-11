@@ -1,0 +1,15 @@
+---
+type Props = {
+  class?: string;
+};
+
+const { class: clazz = "" } = Astro.props;
+---
+
+<div class="w-full bg-gray-200 p-5 md:p-20">
+  <div
+    class={`flex flex-col items-center py-5 lg:p-10 bg-white rounded-xl ${clazz}`}
+  >
+    <slot />
+  </div>
+</div>

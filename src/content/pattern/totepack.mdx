@@ -1,0 +1,72 @@
+---
+title: Totepack
+linkTitle: Everyday Totepack
+details:
+  complexity: 2
+  category: gear
+  skills: Multiple panels, flat felled seams, recessed zipper panel
+---
+
+import Card from "@/components/ui/Card.astro";
+import DividedSection from "@/components/ui/DividedSection.astro";
+import PayhipButton from "@/components/PayhipButton.astro";
+import PageQuote from "@/components/PageQuote.astro";
+import SimplePattern from "@/components/SimplePattern.astro";
+
+<SimplePattern
+  title={frontmatter.title}
+  tagline="Everyday Series Sewing Pattern"
+  pictures={[{
+      picture: import("@/images/edTotepack/1.jpg"),
+      title: "Bomber tote bag for boat trips, camping, or grocery runs.",
+    },{
+      picture: import("@/images/edTotepack/2.jpg"),
+      title: "Shoulder straps can be made from body fabric or webbing.",
+    },{
+      picture: import("@/images/edTotepack/3.jpg"),
+      title: "Coverts to a backpack without any special hardware or fiddling.",
+    },{
+      picture: import("@/images/edTotepack/4.jpg"),
+      title: "Recessed zipper is a professional design detail.",
+    },{
+      picture: import("@/images/edTotepack/5.jpg"),
+      title: "Optional pocket added using LearnMYOG Hiker Wallet pattern.",
+    },{
+      picture: import("@/images/edTotepack/cb_lumpeo1.jpg"),
+      title: "beautiful birthday gift for mom, customized by u/Lumpeo",
+    },{
+      picture: import("@/images/edTotepack/cb_lumpeo2.jpg"),
+      title: "Flowered oil cloth is a great option for tote bags, by u/Lumpeo",
+    }]}
+  class="!pb-0"
+>
+
+  <PageQuote>
+    A great gift for any season, family or friend. Everyday Totepack converts into a backpack with no fiddling or fuss.
+    A recessed zipper and optional interior pocket are convenient design details.
+  </PageQuote>
+
+  <DividedSection header="Features">
+
+    - Rugged technical fabrics make a durable and lasting tote bag
+    - Recessed zipper panel is convenient, secure, and a professional design detail
+    - Great starter project with low cost fabric options and minimal yardage required
+    - Beginner-friendly #MYOG project requiring few materials and makes a great gift
+    - Hone your sewing skill with multiple flat felled seams and a few curved seams
+    - Finished totepack measures approx 13" x 15" x 4.5"
+
+    Learn about technical fabrics, recommendations, and trusted vendors in our new [Fabrics Guide](/fabrics)
+
+  </DividedSection>
+
+  <Card>
+    <DividedSection header="Free Download" >
+      - Print at home pattern suitable for both Letter and A4 sized paper
+      - Detailed step-by-step sewing instructions
+      - Complete list of recommended materials
+
+      <PayhipButton amount={0} code="ApyG"/>
+    </DividedSection>
+  </Card>
+
+</SimplePattern>

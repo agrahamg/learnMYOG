@@ -1,0 +1,22 @@
+---
+import { Image } from "@astrojs/image/components";
+import { PartnerKeys, partnerInfos } from "@/ts/partners";
+
+type PartnerType = keyof typeof partnerInfos;
+
+type Props = {
+  partner: PartnerType;
+};
+
+let { partner } = Astro.props;
+const { label, link, image } = partnerInfos[partner];
+---
+
+<a href={link} target="_blank" class="not-prose" title={label}>
+  <Image
+    class="opacity-50 saturate-0 transition-all hover:opacity-100 hover:saturate-100"
+    src={image as any}
+    alt={label}
+    style="width:auto;"
+  />
+</a>

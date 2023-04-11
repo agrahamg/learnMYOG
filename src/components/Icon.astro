@@ -1,0 +1,13 @@
+---
+import { IconDefinition, icon } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+
+type Props = {
+  icon: IconDefinition;
+  class: string;
+};
+
+const { icon: iconProp, class: clazz } = Astro.props;
+---
+
+<Fragment set:html={icon(iconProp, { classes: clazz }).html} />

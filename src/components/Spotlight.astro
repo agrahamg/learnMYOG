@@ -1,0 +1,43 @@
+---
+type Props = {
+  title: string;
+  buttonText?: string;
+  href?: string;
+  leftImage?: boolean;
+  class?: string;
+};
+
+const {
+  title,
+  buttonText,
+  href,
+  leftImage = false,
+  class: clazz = "",
+} = Astro.props;
+---
+
+<section
+  class={`stretch flex items-center bg-[var(--spotlight)] ${
+    leftImage ? "md:flex-row-reverse flex-col-reverse" : "md:flex-row flex-col"
+  } ${clazz}`}
+>
+  <div
+    class="prose prose-lg prose-invert flex max-w-none flex-col items-center p-5 text-center md:w-3/5"
+  >
+    <h3>{title}</h3>
+    <p class="text-white">
+      <slot />
+    </p>
+    <div class="not-prose pt-5 text-black">
+      <a
+        {href}
+        class="whitespace-nowrap rounded-full bg-white px-7 py-4 transition-colors hover:bg-[var(--banner)] hover:text-white"
+      >
+        <slot name="button">{buttonText}</slot>
+      </a>
+    </div>
+  </div>
+  <div class="flex max-h-80 items-center overflow-hidden md:w-2/5">
+    <slot name="image" />
+  </div>
+</section>

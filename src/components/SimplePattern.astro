@@ -1,0 +1,47 @@
+---
+import { CropPosition } from "@astrojs/image/dist/loaders";
+import Layout from "@/layouts/Layout.astro";
+import ArticleHeader from "@/components/PageHeader.astro";
+import Gallery from "@/components/Gallery.astro";
+import Expander from "@/components/Expander.astro";
+
+type Props = {
+  title: string;
+  tagline: string;
+  pictures: { picture: any; title: string; position?: CropPosition }[];
+  buildPictures?: Record<string, () => any>;
+  class: string;
+};
+
+const {
+  title,
+  tagline,
+  pictures,
+  buildPictures,
+  class: clazz = "",
+} = Astro.props;
+---
+
+<Layout {...Astro.props}>
+  <main
+    class={`flex flex-col items-center space-y-10 pb-5 prose-hr:w-4/5 ${clazz}`}
+  >
+    <ArticleHeader header={title} {tagline} />
+
+    <slot name="afterHeader" />
+
+    <Gallery {pictures}>
+      <slot name="gallery" />
+    </Gallery>
+
+    <slot />
+
+    {
+      buildPictures && (
+        <Expander buttonTitle="Detailed Build Photos">
+          <Gallery glob={buildPictures} />
+        </Expander>
+      )
+    }
+  </main>
+</Layout>

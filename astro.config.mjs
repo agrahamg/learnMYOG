@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config";
 import rehypeExternalLinks from "rehype-external-links";
 
-// https://astro.build/config
 import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
@@ -11,13 +10,14 @@ import image from "@astrojs/image";
 import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
-import react from "@astrojs/react";
+import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
+  site:'https://learnmyog.com/',
   integrations: [mdx(), image({
     serviceEntryPoint: "@astrojs/image/sharp"
-  }), svelte(), react()],
+  }), svelte(), tailwind()],
   markdown: {
     rehypePlugins: [[rehypeExternalLinks, {
       target: "_blank",

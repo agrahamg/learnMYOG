@@ -1,0 +1,72 @@
+---
+title: U-Zip Bag
+description: description
+---
+
+import Card from "@/components/ui/Card.astro";
+import DividedSection from "@/components/ui/DividedSection.astro";
+import SmallPartnerLogo from "@/components/SmallPartnerLogo.astro";
+import PayhipButton from "@/components/PayhipButton.astro";
+import SimplePattern from "@/components/SimplePattern.astro";
+
+<SimplePattern
+  title={frontmatter.title}
+  tagline="Our versatile fleece Pullover Hoodie is an essential mid-layer suited for casual adventures"
+  pictures={[{
+    picture: import("@/images/uzip/uzip7.jpg"),
+    title: "Duffel inspired U-Shaped Zipper"
+  }, {
+    picture: import("@/images/uzip/uzip1.jpg"),
+    title: "Full width opening thanks to u-shaped zipper"
+  }, {
+    picture: import("@/images/uzip/uzip4.jpg"),
+    title: "Small but stout storage bag"
+  }, {
+    picture: import("@/images/uzip/uzip6.jpg"),
+    title: "Double layered bottom for max durability"
+  }, {
+    picture: import("@/images/uzip/uzip3.jpg"),
+    title: "Elliptical profile for self-standing structure"
+  }, {
+    picture: import("@/images/uzip/uzip5.jpg"),
+    title: "Pre-curved zipper. Instructions included."
+  }]}
+>
+
+  <DividedSection header="Design Features">
+    ### Bag Features
+
+    Inspired by expedition duffel bags this small storage bag originated as an exercise in sewing the U-shaped zipper. The elliptical shape and expansive top lid means clear visibility and access to the contents. With optional overlay panels for durability, U-Zip Bags are optimal for garage tools, climbing hardware, or any other heavy duty use.
+
+    - Wide opening U-Shaped Zipper lid
+    - Elliptical profile for free standing structure
+    - Optional overlays on bottom and sides
+    - Bag measures ~ 9 x 5 x 7 inches (23 x 12.7 x 17.8 cm)
+  </DividedSection>
+
+  <Card>
+    <DividedSection header="Digital Sewing Pattern">
+      - Print at home pattern suitable for both Letter and A4 sized paper
+      - Material list and cut layout
+      - Detailed step-by-step sewing instructions
+      - Pay what you want. Donations support free content.
+
+      <PayhipButton amount={0} code="hBDsr"/>
+    </DividedSection>
+  </Card>
+
+  <DividedSection header="Fabrics" class="prose-td:align-middle">
+    See [Fabrics Guide](/article/fabrics) for technical fabric descriptions and [LearnMYOG Map](/map) for local vendors.
+
+    - YKK #5 coil zipper. Size and style of zipper matters.
+    - Recommend bias binding tape for curved seams, not grosgrain ribbon.
+
+  | Material     | Description                                                                            | Length (Width) | Links                                                                                           |
+  |--------------|----------------------------------------------------------------------------------------|----------------|-------------------------------------------------------------------------------------------------|
+  | Shell Fabric | Sturdy pack fabric 400-600 denier<br/>500d Cordura, 420d ROBIC, EPLX400, XPac X50, etc | 1/2 yd (58")   | <SmallPartnerLogo partner="ripstopbytheroll" product="challenge-ecopak-eplx400"/>               |
+  | Zipper       | YKK #5 Coil Zipper continuous tape and one slider                                      | 21 inches      | <SmallPartnerLogo partner="ripstopbytheroll" product="ykk-coil-zipper?variant=43872522567850"/> |
+  | Bias Binding | Double fold bias tape, twill tape, fold over elastic, etc                              | 3 yd (3/4-1")  | <SmallPartnerLogo partner="questoutfitters" product="narrow_roll_good_products.htm#BIAS_TAPE"/> |
+
+  </DividedSection>
+
+</SimplePattern>

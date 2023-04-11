@@ -1,0 +1,48 @@
+---
+import { Image } from "@astrojs/image/components";
+import { getEntryBySlug } from "astro:content";
+import type { IndexLinkProps } from "./types";
+
+type Props = IndexLinkProps;
+
+let {
+  href,
+  title,
+  alt,
+  image,
+  width = 200,
+  class: clazz = "",
+  article,
+  pattern,
+} = Astro.props;
+
+if (article) {
+  const obj = await getEntryBySlug("article", article);
+  if (!obj) {
+    throw Error("could not find collection");
+  }
+  href = `/${obj.collection}/${article}`;
+  title = obj.data.linkTitle || obj.data.title;
+} else if (pattern) {
+  const obj = await getEntryBySlug("pattern", pattern);
+  if (!obj) {
+    throw Error("could not find collection");
+  }
+  href = `/${obj.collection}/${pattern}`;
+  title = obj.data.linkTitle || obj.data.title;
+}
+---
+
+<section class={`flex basis-full justify-center pt-10 ${clazz}`}>
+  <a href={href} class="flex flex-col items-center">
+    <Image
+      class="rounded"
+      format="webp"
+      width={width}
+      aspectRatio="1:1"
+      src={image}
+      alt={alt || title}
+    />
+    {title}
+  </a>
+</section>

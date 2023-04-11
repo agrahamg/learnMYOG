@@ -1,0 +1,30 @@
+---
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { type PartnerKeys, partnerInfos } from "../ts/partners";
+import { Image } from "@astrojs/image/components";
+
+type Props = {
+  partner: PartnerKeys;
+  product?: string;
+};
+
+const { partner, product } = Astro.props;
+
+const { label, link, ...partnerInfo } = partnerInfos[partner as PartnerKeys];
+
+const href =
+  product && "linkFn" in partnerInfo ? partnerInfo.linkFn(product) : link;
+
+if (!("smallImage" in partnerInfo)) {
+  throw Error("no small image provided");
+}
+---
+
+<a href={href} target="_blank" class="not-prose">
+  <Image
+    src={partnerInfo.smallImage as any}
+    width={28}
+    alt={label}
+    class="rounded"
+  />
+</a>

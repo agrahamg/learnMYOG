@@ -1,0 +1,22 @@
+---
+type Props = {
+  character: string;
+  rating: number;
+  outOf?: number;
+};
+
+const { character, rating, outOf = 3 } = Astro.props;
+
+const gray = outOf - rating;
+---
+
+<div>
+  {character.repeat(rating)}<span>{character.repeat(gray)}</span>
+</div>
+
+<style>
+  span {
+    @apply text-transparent;
+    text-shadow: 0 0 0 lightgray;
+  }
+</style>

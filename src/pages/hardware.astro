@@ -2,12 +2,11 @@
 import Layout from "@/layouts/Layout.astro";
 import Disclosure from "@/components/Disclosure.astro";
 import Hardware from "@/components/hardware/Hardware.svelte";
-import Section from "@/components/Section.astro";
 ---
 
 <Layout title="Learn MYOG Hardware Picker">
-  <Section>
+  <main class="container py-10">
     <Hardware client:load />
     <Disclosure />
-  </Section>
+  </main>
 </Layout>

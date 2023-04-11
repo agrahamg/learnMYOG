@@ -1,4 +1,4 @@
-function getNumberInputs() {
+function getNumberInputs(): Record<string, number> {
   return (
     [...document.querySelectorAll("input[type=number]")] as HTMLInputElement[]
   ).reduce((acc, obj) => ({ ...acc, [obj.name]: +obj.value }), {});
@@ -61,7 +61,13 @@ export function init(
   document.querySelectorAll("input").forEach((obj) =>
     obj.addEventListener("input", () => {
       const isMetric = getIsMetric();
-      const calculatedValues = fn(isMetric, getNumberInputs());
+      const fields = getNumberInputs();
+      if (Object.values(fields).some((field) => field <= 0)) {
+        return;
+      }
+
+      const calculatedValues = fn(isMetric, fields);
+      console.log(calculatedValues);
       if (!calculatedValues) return;
 
       setCalculatedValues(isMetric, calculatedValues);

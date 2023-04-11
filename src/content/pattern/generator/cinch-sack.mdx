@@ -1,0 +1,172 @@
+---
+layout: "@/layouts/Markdown.astro"
+title: Cinch Sack Pattern Generator
+---
+import CenteredSection from "@/components/ui/CenteredSection.astro";
+import DividedSection from "@/components/ui/DividedSection.astro";
+import Card from "@/components/ui/Card.astro";
+import { Image } from "@astrojs/image/components";
+import CinchSack from "@/components/generator/CinchSack.astro"
+
+<Card class="prose max-w-none">
+  # {frontmatter.title}
+  <CinchSack/>
+</Card>
+
+<CenteredSection>
+  # Assembly Instructions
+
+  <DividedSection header="Materials">
+    <Image
+      format="webp"
+      width={225}
+      aspectRatio="1/1"
+      src={import("@/images/cinchsack/materials.jpg")}
+      alt="stuff sack materials"
+      class="float-right rounded-lg"
+    />
+
+    See our [Fabrics Guide](article/fabrics) for technical fabrics, recommendations, and trusted vendors.
+    Lighter weight materials such as 1.9oz ripstop nylon work best for drawstring channels.
+
+    - This project uses two fabric panels: Body panel & Cord Channel.
+    - One drawstring cut to **6 inches (15 cm) longer than Body Panel Length (<span class="patternLength"/>)**
+    - One cord lock compatible with the drawstring.
+    - One 4 inch (10 cm) piece of webbing or ribbon.
+
+
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Body Panel">
+    <Image
+      format="webp"
+      width={225}
+      aspectRatio="1/1"
+      src={import("@/images/cinchsack/cinch2.jpg")}
+      alt="Body panel pattern"
+      class="float-right "
+    />
+
+    1. Measure and cut one fabric body panel. **Length: <span class="patternLength"/>** and **Height:
+    <span class="patternHeight"/>**.
+    2. Mark the mid point of the panel along top and bottom edges.
+    3. Along the top, mark the **<span class="sA"/>** seam allowance from the left and right side.
+
+    In the illustrations, the fabric's wrong side is light blue.
+
+
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Drawstring Channel">
+    <Image
+      format="webp"
+      width={225}
+      aspectRatio="1/1"
+      src={import("@/images/cinchsack/cinch3.jpg")}
+      alt="cord channel pattern"
+      class="float-right "
+    />
+
+    1. Measure and cut one cord channel panel. **Length: <span class="channelLength"/>** and **Height: <span
+    class="channelHeight"/>**.
+    1. Fold and stitch a **<span class="sA"/>** single fold hem along one end of Cord Channel.
+    1. Repeat **<span class="sA"/>** single fold hem on opposite side.
+    1. Fold the cord channel right sides out (RSO). Align top and bottom edge. Baste stitch inside **<span class="sA"/>**
+    seam allowance.
+    1. Baste stitch a webbing pull loop at the mid point of Cord Channel.
+
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Attach Cord Channel">
+    <Image
+      format="webp"
+      width={225}
+      aspectRatio="1/1"
+      src={import("@/images/cinchsack/cinch4.jpg")}
+      alt="Sew channel to body"
+      class="float-right"
+    />
+
+    1. Center align Cord Channel to top edge of Body Panel, right sides together (RST).
+    1. Note: the Cord Channel should be inset **<span class="sA"/>** from the sides of Body Panel.
+    1. Confirm webbing loop is sandwiched between Body and Cord Channel, then sew Cord Channel to Body Panel.
+    1. Depending on how quickly your fabric frays, you may consider overcasting the raw edge with a zigzag stitch.
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Body Seams">
+    <Image
+      format="webp"
+      width={224}
+      aspectRatio="1/1"
+      src={import("@/images/cinchsack/cinch5.jpg")}
+      alt="Stitch side and bottom"
+      class="float-right"
+    />
+
+    1. Flip the Cord Channel up and finger press the seam down towards the Body Panel.
+    1. Along top edge of Body Panel just below Cord Channel, topstitch through Body Panel and seam allowances.
+    1. Fold the Body Panel in half, right sides together (RST).
+    1. Starting at the Cord Channel openings, stitch the Body Panel sides together.
+    1. Center align the side seam. Finger press the seam to one side.
+    1. Stitch the bottom closed.
+
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Squaring the Bottom">
+    <Image
+      format="webp"
+      width={225}
+      aspectRatio="1/1"
+      src={import("@/images/cinchsack/cinch6.jpg")}
+      alt="Sew squared corners"
+      class="float-right"
+    />
+
+    1. Blow a little air into the stuff sack and press the sides in to form sharp 90 degree corners.
+    1. With the bottom seam finger pressed flat and straight, draw a mark from the left side:
+      - 1/2 Bottom Width = **<span class="halfBottomWidth"/>**
+      - Bottom Length = **<span class="bottomLength"/>**
+      - 1/2 Bottom Width **<span class="halfBottomWidth"/>** should remain.
+    1. At first mark, draw a **<span class="bottomWidth"/>** line (Bottom Width) perpendicular and
+    centered on bottom seam.
+    1. Repeat same on vertical line at other mark.
+    1. The bottom should look like the image ->
+    1. Stitch along the vertical lines forming the rectangular bottom.
+    1. Before trimming off the corners, flip right side out (RSO) to check for overall symmetry and desired size.
+    1. Trim the corners off about 1/2" (1 cm) from the seam. Overcast or edge bind to prevent fraying.
+
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Finishing Up">
+    <Image
+      format="webp"
+      width={225}
+      aspectRatio="1/1"
+      src={import("@/images/cinchsack/sample.jpg")}
+      alt="sample stuff sack"
+      class="float-right rounded-xl"
+    />
+
+    1. Flip the cinch sack right side out (RSO).
+    1. Where Cord Channel openings meet the Body Panel, add a small reinforcement stitch.
+    1. With a safety pin or paracord fid, thread the drawstring through the Cord Channel.
+    1. Add the cord lock and tie the free ends of the drawstring together.
+
+    **👏 Congrats on making your own custom stuff sack!**
+
+    If you want to try another style, check out the [Round Bottom Stuff Sack](/pattern/generator/stuff-sack)!
+
+  </DividedSection>
+</CenteredSection>

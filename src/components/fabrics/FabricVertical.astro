@@ -11,21 +11,12 @@ type Props = {
 const { ratings, image, title } = Astro.props;
 ---
 
-<article>
-  <div class="inner">
-    <a class="image fit" style=" outline: 0px;">
-      <Image
-        format="webp"
-        width={400}
-        aspectRatio="1:1"
-        src={image}
-        alt="fabric"
-        style="width:80%; height:auto; margin:auto;"
-      />
-    </a>
-  </div>
+<article class="flex flex-col items-center">
+  <Image format="webp" width={300} aspectRatio="1:1" src={image} alt="fabric" />
   <h3>{title}</h3>
-  <RatingCollection {ratings} />
+  <div class="flex w-full justify-around">
+    <RatingCollection {ratings} />
+  </div>
   <p>
     <slot />
   </p>

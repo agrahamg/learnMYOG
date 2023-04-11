@@ -1,0 +1,65 @@
+---
+title: Running Belt
+details:
+  complexity: 1
+  category: gear
+  skills: Basic zipper, webbing and buckle, and precision sewing
+---
+
+import Card from "@/components/ui/Card.astro";
+import DividedSection from "@/components/ui/DividedSection.astro";
+import PayhipButton from "@/components/PayhipButton.astro";
+import PageQuote from "@/components/PageQuote.astro";
+import SimplePattern from "@/components/SimplePattern.astro";
+
+<SimplePattern
+  title={frontmatter.title}
+  tagline="Everyday Series Sewing Pattern"
+  pictures={[{
+    picture: import("@/images/runningBelt/front.jpg"),
+    title: "Secure hip bag sized for outdoor adventures close to home."
+  }, {
+    picture: import("@/images/runningBelt/hero.jpg"),
+    title: "Zip closure keeps valuables secure but easily accessible."
+  }, {
+    picture: import("@/images/runningBelt/back.jpg"),
+    title: "Unlined 3d spacer mesh back for comfort and breathability."
+  }, {
+    picture: import("@/images/runningBelt/cb_dclare1011.jpg"),
+    title: "Matching pair but one scaled for large cell phone, by u/dclare1011"
+  }, {
+    picture: import("@/images/runningBelt/cb_tyrraj.jpg"),
+    title: "Bringing new life to an old belt to carry phone on runs, by u/tyrraj"
+  }, {
+    picture: import("@/images/runningBelt/cb_ms.math.jpg"),
+    title: "Easy one night builds are the best builds, by @Ms.Math"
+  }]}
+  class="!pb-0"
+>
+
+  <PageQuote>
+    When training close to home, keep your phone and valuables secure yet easily accessible.
+  </PageQuote>
+
+  <DividedSection header="Design Features">
+    - Minimal belt for comfort and adjustability
+    - Secure zippered phone and valuables pocket
+    - Airy padded back panel for summer runs
+    - Beginner-friendly #MYOG project requiring few materials
+    - Finished pack measures approx 7" x 4" x 0.5"
+
+    Learn more about technical fabrics, recommendations, and trusted vendors in our new [Fabrics Guide](/fabrics)
+
+  </DividedSection>
+
+  <Card>
+    <DividedSection header="Digital Sewing Pattern">
+      - Print at home pattern suitable for both Letter and A4 sized paper
+      - Detailed step-by-step sewing instructions
+      - Complete list of recommended materials
+
+      <PayhipButton amount={0} code="AMI4"/>
+    </DividedSection>
+  </Card>
+
+</SimplePattern>

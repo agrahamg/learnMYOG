@@ -1,0 +1,19 @@
+---
+export type Props = {
+  header: string;
+  tagline?: string;
+};
+
+const { header, tagline } = Astro.props;
+---
+
+<header class="not-prose max-w-none p-5 text-center md:p-10 md:pb-0">
+  <h1 class="pb-2 text-2xl md:pb-4 md:text-4xl lg:pb-6 lg:text-6xl">
+    {header}
+  </h1>
+  {
+    tagline !== undefined ? (
+      <p class="text-lg italic md:text-xl lg:text-2xl" set:html={tagline} />
+    ) : null
+  }
+</header>

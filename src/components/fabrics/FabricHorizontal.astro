@@ -1,10 +1,7 @@
 ---
 import { Image } from "@astrojs/image/components";
-import { ripstopLink } from "@/ts/links";
 import RatingCollection from "./RatingCollection.astro";
-import { partnerInfos } from "@/ts/partners";
-
-type PartnerKeys = keyof typeof partnerInfos;
+import { type PartnerKeys, partnerInfos } from "@/ts/partners";
 
 type Props = {
   ratings?: Record<string, string | number>;
@@ -16,46 +13,47 @@ type Props = {
 const { ratings, title, partners, image } = Astro.props;
 ---
 
-<section>
-  <header>
-    <a class="image left" style="outline: 0px;">
-      <Image
-        format="webp"
-        width={400}
-        aspectRatio="1:1"
-        src={image}
-        alt="fabric"
-      />
-    </a>
-  </header>
+<article
+  class="flex flex-col items-center gap-2 border-b-2 pb-5 pt-10 last:border-b-0 sm:flex-row md:gap-5"
+>
+  <Image
+    format="webp"
+    width={400}
+    aspectRatio="1:1"
+    src={image}
+    alt="fabric"
+    class="w-[15rem] rounded-lg"
+  />
 
-  <div class="content">
-    <h3>{title}</h3>
-    <RatingCollection {ratings}>
-      <div class="partners">
+  <div class="flex flex-col gap-2">
+    <h3 class="text-3xl">{title}</h3>
+    <div class="flex flex-wrap justify-between gap-5">
+      <div class="flex items-center gap-10">
+        <RatingCollection {ratings} />
+      </div>
+      <div class="flex items-center gap-10">
         {
           Object.entries(partners).map(([name, product]) => {
-            const { label, image, ...partnerInfo } =
+            const { label, image, link, ...partnerInfo } =
               partnerInfos[name as PartnerKeys];
             return (
               <a
                 href={
-                  partnerInfo.linkFn?.(product as string) || partnerInfo.link
+                  "linkFn" in partnerInfo ? partnerInfo.linkFn(product) : link
                 }
                 target="_blank"
                 class="label"
               >
-                <Image src={image as any} alt={label} />
-                <span class="label">{label}</span>
+                <Image src={image as any} alt={label} class="h-10 w-auto" />
               </a>
             );
           })
         }
       </div>
-    </RatingCollection>
+    </div>
 
-    <p>
+    <div class="prose max-w-none">
       <slot />
-    </p>
+    </div>
   </div>
-</section>
+</article>

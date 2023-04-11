@@ -6,32 +6,41 @@ type Props = {
 const { buttonTitle } = Astro.props;
 ---
 
-<div class="expander-wrapper">
+<div class="flex flex-col items-center">
   <p>
-    <button class="button large icon solid fa-angle-down toggle-button">
+    <button
+      class="toggle-button m-5 rounded-full border-2 border-gray-300 px-5 py-2"
+    >
+      <span class="fa fa-angle-down"></span>
       {buttonTitle}
     </button>
   </p>
 
-  <div class="expander hidden">
+  <div class="expander zero-height">
     <slot />
   </div>
 </div>
 
 <script>
-  const height = document.querySelector(".expander > *")?.clientHeight;
-  const expander = document.querySelector(".expander") as HTMLElement;
+  const expanders = document.querySelectorAll<HTMLElement>(".expander");
 
-  expander.style.height = `${height}px`;
+  expanders.forEach((expander) => {
+    const height = expander.querySelector("*")?.clientHeight ?? 0;
+    expander.style.height = `${height}px`;
+  });
 
   document.querySelectorAll(".toggle-button")?.forEach((obj) =>
     obj.addEventListener("click", () => {
       obj.parentElement?.parentElement
         ?.querySelector(".expander")
-        ?.classList.toggle("hidden");
+        ?.classList.toggle("zero-height");
 
-      obj.classList.toggle("fa-angle-down");
-      obj.classList.toggle("fa-angle-up");
+      //TODO: fix icon
+      const icon = obj.querySelector("span");
+      if (icon) {
+        icon.classList.toggle("fa-angle-down");
+        icon.classList.toggle("fa-angle-up");
+      }
     })
   );
 </script>
@@ -42,7 +51,7 @@ const { buttonTitle } = Astro.props;
     transition: all 0.3s ease-in-out;
   }
 
-  .hidden {
+  .zero-height {
     height: 0 !important;
   }
 </style>

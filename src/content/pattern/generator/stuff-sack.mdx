@@ -1,0 +1,151 @@
+---
+layout: "@/layouts/Markdown.astro"
+title: Stuff Sack Pattern Generator
+---
+import CenteredSection from "@/components/ui/CenteredSection.astro";
+import DividedSection from "@/components/ui/DividedSection.astro";
+import Card from "@/components/ui/Card.astro";
+import { Image } from "@astrojs/image/components";
+import StuffSack from "@/components/generator/StuffSack.astro"
+
+<Card class="prose max-w-none">
+  # {frontmatter.title}
+  <StuffSack/>
+</Card>
+
+<CenteredSection>
+  # Material List
+
+  <DividedSection header="Getting Started">
+    Learn about technical fabrics, recommendations, and trusted vendors in our new <a href="article/fabrics">Fabrics Guide</a>.
+
+    Lighter weight materials such as 1.9oz ripstop nylon work best for drawstring channels.
+
+    - One fabric circle cut to size
+    - One fabric rectangular panel cut to size
+    - Drawstring ~6 inches (15 cm) longer than **<span class="patternWidth"/>**
+    - One cord lock that works with your drawstring.
+
+  </DividedSection>
+
+</CenteredSection>
+
+---
+
+<CenteredSection>
+  # Assembly Instructions
+
+  <DividedSection header="Circle Pattern">
+    <Image
+      format="webp"
+      width={225}
+      aspectRatio="1/1"
+      src={import("@/images/stuffsack/ssInstr1.png")}
+      alt="Pattern"
+      class="float-right rounded-lg"
+    />
+
+    1. For the circle, cut a square piece of paper with each side slightly larger than the **<span class="patternDiameter"/> Diameter**.
+    2. Fold this square in half and then in half again, along the other edge, making a smaller square.
+    3. Mark the generated **<span class="patternRadius"/> Circle Radius**, from the fold corner to draw symmetric arc as shown.
+    4. Cut and unfold your perfectly symmetric circle pattern.
+    5. Trace and cut your fabric along the outer perimeter.
+    6. Mark the 3/8 inch (1 cm) seam allowance along the inside edge.
+
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Body Panel">
+    <Image
+      format="webp"
+      width={225}
+      aspectRatio="1/1"
+      src={import("@/images/stuffsack/ssInstr2.png")}
+      alt="Pattern"
+      class="float-right rounded-lg"
+    />
+
+    1. Using the generated **<span class="patternWidth"/> Fabric Width** and
+    **<span class="patternHeight"/> Fabric Height**, measure and draw the dimensions on a fabric panel.
+    2. Cut the fabric panel along the outer perimeter.
+    3. Mark the 1.5 inch (4 cm) channel allowance along one Fabric Width edge.
+    4. Mark the 3/8 inch (1 cm) seam allowance along each remaining edge.
+
+    You should now have two fabric panels, a circle and a body.
+
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Drawstring Channel">
+    <Image
+      format="webp"
+      width={225}
+      aspectRatio="1/1"
+      src={import("@/images/stuffsack/ssInstr3.png")}
+      alt="Pattern"
+      class="float-right rounded-lg"
+    />
+
+    1. With wrong side up, fold the corners to the channel allowance, as shown. Pins or wash-away tape helps.
+    2. Fold the top edge down to the channel allowance. In the illustration, the wrong side is light blue.
+    3. If your presser foot is narrow enough, insert the drawstring and stitch along the channel edge.
+    4. Optionally, stitch as close to the raw edge as possible and pull your drawstring thru later.
+    5. Depending on how quickly your fabric frays, you may consider overcasting the raw edge with a zigzag stitch.
+
+    Your channel should look like the illustration, quite loose around the drawstring.
+
+
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Sewing the Circle">
+    <Image
+      format="webp"
+      width={225}
+      aspectRatio="1/1"
+      src={import("@/images/stuffsack/ssInstr4.png")}
+      alt="Pattern"
+      class="float-right rounded-lg"
+    />
+
+    1. Contrary to many online tutorials, it's better to sew the circle now to avoid puckering later.
+    2. This is by far the toughest part of the project, so take your time. A short stitch length makes sewing curves
+    easier.
+    3. With right sides touching, align the circle's **center line** to the body's left edge seam allowance.
+    4. The bottom of the circle should be touching the bottom edge of the body panel.
+    5. If your diameter is large enough, pin or staple the body to the circle's perimeter within the seam allowance.
+    6. Follow your circle's seam allowance as you sew. Go slow, use a short stitch length. Make sure the edges are even
+    as you progress.
+    7. As you reach your starting point, stop before stitching over the body panels vertical seam allowance.
+
+    Phew, you're past the crux. Circles take a lot of patience and practice.
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Body Seam">
+    <Image
+      format="webp"
+      width={225}
+      aspectRatio="1/1"
+      src={import("@/images/stuffsack/ssInstr5.png")}
+      alt="Pattern"
+      class="float-right rounded-lg"
+    />
+
+    1. Because we stitched the circle first, the vertical seam allowances may be a bit uneven. No worries!
+    2. Press your stuff sack flat against a table with the open seam along an edge.
+    3. Start or stop at the red "x" drawn in the illustration.
+    4. Either way, sew the body seam closed, reinforcing the channel opening.
+    5. If your seams fray, consider edge binding or look into French Seams next time.
+    6. Pull your drawstring through and add your cord lock!
+
+    **👏 Congrats on making your own custom stuff sack!**
+
+    Sewing round bottom stuff sacks is tougher than it appears huh?!
+    If you want to try an easier style <a href="/pattern/generator/cinch-sack">Cinch Sack</a>!
+  </DividedSection>
+</CenteredSection>

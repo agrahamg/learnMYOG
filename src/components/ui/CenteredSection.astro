@@ -1,0 +1,13 @@
+---
+export type Props = {
+  header: string;
+};
+
+const { header, style } = Astro.props;
+---
+
+<section
+  class="container prose flex max-w-none flex-grow flex-col items-center prose-h1:text-3xl prose-hr:w-2/3"
+>
+  <slot />
+</section>

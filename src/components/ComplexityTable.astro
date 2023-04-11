@@ -1,0 +1,51 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import Rating from "@/components/Rating.astro";
+import { sort } from "radash";
+
+type Props = {
+  category: NonNullable<
+    CollectionEntry<"pattern">["data"]["details"]
+  >["category"];
+  defaultIcon?: string;
+};
+
+const { category, defaultIcon = "✂️" } = Astro.props;
+let patterns = await getCollection(
+  "pattern",
+  (obj) => obj.data.details?.category === category
+);
+
+patterns = sort(patterns, (p) => p.data.details.complexity);
+---
+
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Complexity</th>
+      <th>Skills Learned</th>
+    </tr>
+  </thead>
+  <tbody>
+    {
+      patterns.map(
+        ({ collection, slug, data: { linkTitle, title, details } }) => (
+          <tr>
+            <td>
+              <a href={`/${collection}/${slug}`}>{linkTitle || title}</a>
+            </td>
+            <td>
+              <Rating
+                rating={details!.complexity}
+                character={details!.complexityIcon || defaultIcon}
+              />
+            </td>
+            <td>{details!.skills}</td>
+          </tr>
+        )
+      )
+    }
+    <slot />
+  </tbody>
+</table>

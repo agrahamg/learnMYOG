@@ -1,0 +1,314 @@
+---
+layout: "@/layouts/Markdown.astro"
+title: "Zero to Hero"
+linkTitle: "Zippers"
+---
+
+import ComplexityTable from "@/components/ComplexityTable.astro";
+import DividedSection from "@/components/ui/DividedSection.astro";
+import PageHeader from "@/components/PageHeader.astro";
+import CenteredSection from "@/components/ui/CenteredSection.astro";
+import Disclosure from "@/components/Disclosure.astro";
+import Card from "@/components/ui/Card.astro";
+import Partners from "@/components/Partners.astro";
+import SmallPartnerLogo from "@/components/SmallPartnerLogo.astro";
+import { Image } from "@astrojs/image/components";
+
+<PageHeader header={frontmatter.title} tagline='Successful adventures start with a map and the right tools'/>
+
+<CenteredSection>
+  <div class="text-center max-w-screen-lg">
+  How can I learn to make my first backpack?!
+
+  With so many videos, patterns, and projects to choose from... knowing how and where to start making is nearly
+  impossible. My patterns are designed to help anyone develop core sewing skills while making long-lasting outdoor gear.
+  Before you know it, you'll be confident in tackling your first backpack or technical garment.
+  </div>
+
+  <DividedSection header="Day 1, Hour 0">
+    Unboxings done. You've looked at the pictures in the machine's user manual. You've sewn a few crooked stitches and
+    removed a few rats nests of thread. Congrats, it's now time to make something useful.
+
+    ☝️ Still shopping sewing machines? See my recommendations for MYOG Essentials.
+
+    If today is your first day sewing since middle school, I recommend getting started with a Cinch Sack. If
+    you have a small buckle and webbing, a Roll Top Sack follows very similar construction steps. Hop over to the
+    pattern generator and input dimensions to get a pattern that fits your fabric.
+
+    In these first couple projects focus on these core skills:
+    - Sewing consistent clean stitches without knots or snags
+    - Accurately sewing to stated seam allowances
+    - Guiding technical fabrics through the machine for straight seams
+    - Squaring up edges for a symmetric and nice finish
+
+    For a small, no brainer materials kit with everything you need for your first couple stuff sacks, check out the $10
+    DIY Kit from RBTR. Their instructions and steps are a little different from mine, but I wish this materials kit was
+    around when I got started!
+
+    Hint: if using the $10 DIY Kit, a cinch sack measuring 8" x 6.5" x 8" tall will fit the 18" x 30" fabric without
+    cutting.
+
+    ---
+
+    Which machine... which needles... what else?!
+
+    Here's the essentials with recommended sewing machines, needle & thread combinations, and all the tools to build out
+    your maker kit.
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Gear Maker">
+    Moving up from stuff sacks to your first pack is pretty daunting. Gear making is technical and unique skills need to
+    be learned! Backpacks, for example, involve more materials and piece parts, there's hardware and webbing, and your
+    pack can't fail or you're going home early. Additional pockets, closure methods, and load carrying systems all
+    require
+    consideration and planning.
+
+    To build confidence and learn various gear making skills, consider the progression below. I'd recommend picking a
+    few
+    projects from each complexity rating to work your way up to tackling your first backpack.
+
+    <ComplexityTable category="gear"/>
+
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Technical Apparel">
+
+    What started out as being extremely intimidating, I've begun to wrap my head around apparel and I've learned it's a
+    VERY broad subject. Based on my research, I break garment making down into the following elements. In industry, each
+    of these topic areas are often performed by different people, each with their own core specialties and expertise.
+
+    Elements of making apparel
+
+    - **Apparel design** - turning vision and goals into an actionable sketch
+    - **Pattern drafting and draping** - methods for converting 3d shapes into flat patterns
+    - **Pattern grading** - proportionally expanding a base pattern into multiple sizes
+    - **Fabric layout and cutting** - mindful marking, handling, and cutting fabric and materials
+    - **Construction and finish** - piecing, seaming, and edge finishing aka "the sewing"
+    - **Tailoring and adjustments** - adjusting pattern or garment for custom fit
+
+    My goal is to see you make your first wearable garments! With that in mind, my designs emphasize function over form.
+    Our outdoor apparel must perform in all conditions or an adventure can easy turn into emergency. Most of my designs
+    are inspired by ready-to-wear items from Patagonia and Outdoor Research, with my own spin on beginner-friendly
+    construction methods and ideas for improvements.
+
+    Much effort goes into establishing and testing accurately-sized patterns to minimize the need for tailoring and
+    major
+    changes for fit. Construction methods for apparel are very similar to gear making so many of the skills are
+    transferable. As my patterns are quite basic in form, they are also great starting blocks for creative designs you
+    may
+    have in mind. For those getting started, my recommendated progression follows.
+
+    <ComplexityTable category="apparel"/>
+
+    You may be asking, "do I *need* a serger?" Well no, but if you're starting to ask, then its probably a good time buy
+    one! Check out my reasons and recommendations below. 👇
+  </DividedSection>
+
+</CenteredSection>
+
+<Card class="prose max-w-none">
+  <div class="text-center">
+    ## Gear up for MYOG
+    *Essential tools for your maker kit*
+  </div>
+
+  <Disclosure/>
+
+  <DividedSection header="Sewing Machines">
+    First and foremost, to make awesome gear you need a sewing machine.
+
+    ### What's the best sewing machine for getting started?
+
+    For your first few projects, I'd recommend borrowing a machine to learn on and become more informed about what works best for your projects. Machines are commonly available to borrow in maker spaces, tool loans through your local library, or through family and friends. When ready to purchase a new or used machine look for the following characteristics. This is a basic list of desired attributes for a low-cost introductory home machine for a beginner.
+
+    - Mechanical drop feed machine with reverse lever
+    - Atleast 1/4" presser foot height, often called two-stage lifter
+    - Presser foot presssure adjustment for feeding various weight fabric
+    - 1-4mm+ minimum stitch length and 5-6mm stitch width
+    - Utility stitches including zigzag, overlock/overcast, and stretch
+    - Automatic button hole (with accessory foot) is a great addition
+    - Walking foot attachment compatible for sewing multiple slippery layers
+    - Needle compatibility size range should include #11/75-16/100+
+    - Quality customer support and local service center
+
+    While I have limited to no experience with these specific machines, each model meets the desired attributes listed. At this price point, these machines are mostly similar and are well regarded by users.
+    <a href="https://amzn.to/3PzR1mJ" target="_blank" class="float-right">
+      <Image src={import('@/images/shared/products/HD1000.webp')} width={225} alt="sewing machine" class="m-0 rounded"/>
+    </a>
+
+    <span style="font-size:0.8rem; text-transform:uppercase;">Amazon affiliate links</span>
+    - Janome [HD1000](https://amzn.to/3zuYLRv) or [HD3000](https://amzn.to/3PTpDjy)
+    - [bernette b05](https://amzn.to/3VyDPlg)
+    - [Singer HD4423](https://amzn.to/3b14JAe)
+
+    If unfamiliar with Bernette, it's Bernina's sub-brand for affordable class machines. The bernette b05 Academy is a great value with the included bundle, has a full metal chassis, and meets all of the above considerations. Likewise, Janome is a long standing high quality sewing machine manufacturer and I've heard many people prefer the Janome HDx000 over the Singer HD44xx series machines.  Both brands can typically be found at local sewing machine dealers so you can test drive the machine in person.
+
+    The Singer HD series is often recommended largely due to price point and availability. Sure, it's probably the only sub-$200 machine capable of sewing heavy weight pack fabrics. But don't be fooled by Singer's marketing as an "all metal" and "heavy duty" machine. And beware Singer's non-existent customer service.
+    To answer the age old question between the HD4411 and HD4423, the HD4423 is worth the small price increase with the addition of stretch stitches for knit fabrics, an automatic buttonhole capability, and an included needle threader.
+
+    ### Can you tell me if machine x, y, or z is right for me?
+
+    Sorry, no. There are too many variables to consider. Your local sewing shop would be happy to help!
+
+    ### Serger yay or nay?
+
+    I use my serger on almost every project. If you're making apparel or regularly sewing knits, a serger should be your
+    second machine and is not a replacement for a lockstitch machine. I recommend a basic two needle, four thread serger
+    with differential feed which allows you to sew strong construction and finishing overlock seams at the same time. A
+    three thread overlock really should be used for raw edge finishing only. Differential feed allows you to adjust the
+    speed of feed dogs to prevent wavy seams, a common headache when sewing knits with a sewing machine. The chainstitch
+    produced by the serger retains stretch in the knit fabric and once you experience the ease of serging knits, you'll
+    regret waiting so long to buy one.
+
+    <a href="https://amzn.to/3OrBDrn" target="_blank" class="float-right">
+      <Image src={import('@/images/shared/products/mo654de.webp')} width={225} alt="juki serger" class="rounded"/>
+    </a>
+
+    <span style="font-size:0.8rem; text-transform:uppercase;">Amazon affiliate links</span>
+    - [Brother 1034d](https://www.amazon.com/Brother-1034D-Thread-Serger-Differential/dp/B0000CBK1L/ref=sr_1_1?crid=1JRCGF0UKXVYY&keywords=brother+1034dx&qid=1658728708&sprefix=brother+1034dx%2Caps%2C122&sr=8-1) - serger I bought used locally
+    - [Juki MO654DE](https://amzn.to/3Bddwtg) - the serger I'll buy if and when mine dies
+    - [Janome 8002D](https://amzn.to/3zv04jn)
+
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Fabrics">
+    <Image src={import('@/images/index/fabrics.jpg')} width={225} class="float-left mr-2 rounded" alt="fabric"/>
+
+    Lucky for you, I have a whole page full of [gear fabric recommendations](/article/fabrics).
+    Specific apparel fabric recommendations are provided within each pattern.
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Needles & Thread">
+    <Image src={import('@/images/shared/products/thread.jpg')} width={225} class="float-right ml-2 rounded" alt="threads"/>
+
+    ### Sewing Gear with Home Machines
+
+    Fabric type and weight is the main factor for selecting the right needle and thread. Polyster thread has high
+    strength with a little stretch making it durable and abrasion resistent. For 95% of my projects Gutermann Mara100
+    and Mara70 are my preferred threads.
+
+  | Fabric Weight (osy) | Fabric Denier | Needle                            | Thread                                                                    |
+  |---------------------|---------------|-----------------------------------|---------------------------------------------------------------------------|
+  | 1 oz/sqyd           | 30D           | #8-11 <br/>Universal or Microtex  | Tex 30<br/>Gutermann Sew-All<br/>Gutermann Mara100                        |
+  | 1-3 oz/sqyd         | 30D-100D      | #10-12 <br/>Universal or Microtex | Tex 30-40<br/>Gutermann Mara100<br/>Gutermann Mara70<br/>Gutermann Tera80 |
+  | 3-6 oz/sqyd         | 200D-400D     | #12-14 <br/>Microtex or Jeans     | Tex 40-50<br/>Gutermann Mara70<br/>A&amp;E Perma Core 45                  |
+  | 6+ oz/sqyd          | 500D+         | #16 <br/>Universal or Jeans       | Tex 40-60<br/>Gutermann Tera60<br/>Gutermann Mara50<br/>Bonded Nylon #46  |
+
+    ---
+
+    ### Sewing Apparel with Home Machines
+
+    For apparel, it's important to select appropriate fabric for the pattern. Stretchy knits will be much faster to sew
+    and have cleaner seams if constructed serger using ball needles and Maxi-Lock Tex 30 thread. For outdoor apparel
+    calling for woven fabric, there are similarities in needles and thread types as used in gear making. For stretchy
+    knits, a ball needle will help to prevent skipped stitches.
+
+  | Project Type                                                            | Fabric Type                                    | Needle                           | Thread                                                                    |
+  |-------------------------------------------------------------------------|------------------------------------------------|----------------------------------|---------------------------------------------------------------------------|
+  | UL Windshells, Sil rainshell<br/>Synthetic shells                       | Ultralight Woven                               | #8-11 <br/>Universal or Microtex | Tex 30<br/>Gutermann Sew-All<br/>Gutermann Mara100                        |
+  | Shorts and pants, twill, taslan<br/>no or low-stretch (&lt;10% spandex) | Light-Medium Weight<br/>Woven or Stretch Woven | #11-14 <br/>Jeans or Universal   | Tex 40-50<br/>Gutermann Mara70<br/>A&E Perma Core 45                      |
+  | Stretch tshirts, base layers,<br/>stretch gaiters, underwear            | Lightweight Knit                               | #10-12 <br/>Ball or Stretch      | Tex 30-40<br/>Gutermann Mara100<br/>Gutermann Mara70<br/>Gutermann Tera80 |
+  | Midlayers, hoodies, fleece                                              | Medium weight Knit                             | #12-14 <br/>Ball or Stretch      | Tex 30-40<br/>Gutermann Mara100<br/>Gutermann Mara70<br/>Gutermann Tera80 |
+
+    For serging or coverstitching, I use Maxi-Lock (tex 30) thread with size 80-90 ball needles. Textured aka Wooly
+    thread, typically nylon but also polyester, will feel softer against skin and is more elastic then a spun polyster
+    thread. Maxi-Lock Stretch is a common example and is optimal for leggings, base layers, and other high-stretch
+    activewear.
+
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Webbing & Binding">
+    Nearly all gear includes webbing for attachments and tensioners. Originating in the tactical gear world, daisy chains are popular for attaching hardware. Shoulder straps and compression straps use tensioner hardware to adjust length and volume. There are a multiple types of webbing commonly available. For long lasting high quality gear, a medium weight nylon flat webbing that is Berry compliant or similar to MIL-W-17337 is most popular.
+
+    - **Nylon flat webbing** is strong thin and light, has a tight weave, and works well in plastic hardware
+    - **Nylon Seatbelt webbing** has smooth feel and soft touch but often slips through plastic hardware
+    - **Tubular webbing** is a tube of webbing pressed flat, used primarily for climbing gear
+    - **Polyprolene webbing** very plasticy, loosely woven, and rough textured but has tons of colors
+    - **Grosgrain** is ribbon most often used for seam binding, very thin and not for carrying weight
+    - **Bias Binding** is for seam binding especially on curves, not for carrying weight
+    - **Fold Over Elastic** is an excellent edge finish on stretch pockets, cuffs, and hood openings
+
+    For packs and gear, the most common style of webbbing used is flat nylon webbing like these [MIL-Spec Nylon
+    Webbing](https://ripstopbytheroll.com/collections/webbing/products/1-nylon-webbing-black?rfsn=4608557.2d546b9) or
+    [Med Wt Nylon Webbing](https://www.questoutfitters.com/narrow_roll_good_products.htm#NYLON_WEBBING_).
+
+    <div class="flex flex-col sm:flex-row not-prose gap-2 items-center justify-center">
+      <Partners partners={["discoveryfabrics", "ripstopbytheroll", "therainshed", "refasten"]}/>
+    </div>
+
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Zippers">
+    <Image src={import('@/images/index/zippers.jpg')} width={225} class="float-right ml-2 rounded" alt="zippers"/>
+
+    Zip over to our [zipper guide](/article/zippers) for info and video tutorials.
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="The Tools I Use" class="first:prose-td:font-bold prose-td:align-middle prose-th:min-w-[50px]">
+    These are my most used tools for designing and making gear. I'm recommending items I personally use.
+
+    - Amazon Affiliate links. At no additional cost to you, I may earn a small commission from your purchase.
+    - Unsponsored, unaffiliated links to Wawak.com because they carry high-quality products and have exceptional
+    customer service. Tell them I sent you!
+
+    ### Everyday Sewing Tools
+
+  |                    |                                                                                                                   |                                                        |                                                                                                                                                                                              |
+  |--------------------|-------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  | Cutting Mat        | Self healing mat for rotary blade. Buy the largest you have space for!                                            | <SmallPartnerLogo partner="amazon" product="3beE96D"/> | <SmallPartnerLogo partner="wawak" link="https://www.wawak.com/cutting-measuring/cutting/cutting-tools/fiskars-rotary-cutting-set-rotary-cutter-cutting-mat-clear-acrylic-ruler/#sku=cut22"/> |
+  | Rotary Cutter      | 45mm is preferred for most economical replacements blades.                                                        | <SmallPartnerLogo partner="amazon" product="3zbNF2k"/> | <SmallPartnerLogo partner="wawak" link="https://www.wawak.com/cutting-measuring/cutting/cutting-tools/olfa-rotary-cutters/#sku=cut3"/>                                                       |
+  | Cutting Ruler      | Cut safely with this clear, non-slip ruler that has a blade guide.                                                | <SmallPartnerLogo partner="amazon" product="3B5Jy9G"/> | <SmallPartnerLogo partner="wawak" link="https://www.wawak.com/cutting-measuring/tapes-rulers/olfa-frosted-acrylic-rulers/#sku=ta1008"/>                                                      |
+  | Seam Ripper        | Your new best friend 🤍 I prefer this larger sized handle for gear making.                                        | <SmallPartnerLogo partner="amazon" product="3bdCNsU"/> | <SmallPartnerLogo partner="wawak" link="https://www.wawak.com/cutting-measuring/cutting/seam-rippers/seam-ripper-5/#sku=sr1"/>                                                               |
+  | Thread Snips       | Kept machine-side for precise and fast thread trimming.                                                           | <SmallPartnerLogo partner="amazon" product="3OzNR12"/> | <SmallPartnerLogo partner="wawak" link="https://www.wawak.com/cutting-measuring/cutting/thread-snips/thrifty-thread-snips-4-14/#sku=is25"/>                                                  |
+  | Fabric Pencils     | Water soluble marking pencils in three colors. These are my favorite hands down. Don't forget a pencil sharpener. | <SmallPartnerLogo partner="amazon" product="3zAn5RZ"/> | <SmallPartnerLogo partner="wawak" link="https://www.wawak.com/cutting-measuring/marking-chalk-pens/pens-pencils/clover-water-soluble-pencils-3pack-assorted-colors/#sku=ck23"/>              |
+  | Wonder Clips       | Binder clips work but these sit flat on table and are much faster to use.                                         | <SmallPartnerLogo partner="amazon" product="3zchjo3"/> | <SmallPartnerLogo partner="wawak" link="https://www.wawak.com/cutting-measuring/fabric-clips-clamps/wawak-plastic-sewing-clips-standard-1-x-38-100pack/#sku=sk1400"/>                        |
+  | Measuring Tape     | Especially useful for body measurements when making apparel.                                                      | <SmallPartnerLogo partner="amazon" product="3cGRoxj"/> | <SmallPartnerLogo partner="wawak" link="https://www.wawak.com/cutting-measuring/tapes-rulers/wawak-fiberglass-tape-measure-60-metricinches-white/#sku=ta22w"/>                               |
+  | Seam Gauge         | Easy way to measure consistent fold-down hems.                                                                    | <SmallPartnerLogo partner="amazon" product="3PQP5WO"/> | <SmallPartnerLogo partner="wawak" link="https://www.wawak.com/cutting-measuring/tapes-rulers/wawak-heavy-duty-seam-gauge-6/#sku=ta180"/>                                                     |
+  | Basting Tape       | Double sided, water soluble tape for perfect seams and hems, 1/4" ftw.                                            | <SmallPartnerLogo partner="amazon" product="3vl0ypJ"/> | <SmallPartnerLogo partner="wawak" link="https://www.wawak.com/bag-construction/basting-tape/wawak-medium-strength-double-sided-basting-tape-30-yds/#sku=tpe31"/>                             |
+  | Glue Stick         | Useful in joining paper patterns or basting seams                                                                 | <SmallPartnerLogo partner="amazon" product="3FoTJZw"/> | <SmallPartnerLogo partner="wawak" link="https://www.wawak.com/garment-construction/fabric-glue/aleenes-tacky-glue-sticks-28-oz-2pack/#sku=glu30"/>                                           |
+  | Bias Binding Maker | Specialty tool for folding self-made bias tape from fabric strips.                                                | <SmallPartnerLogo partner="amazon" product="3OKqkKS"/> | <SmallPartnerLogo partner="wawak" link="https://www.wawak.com/sewing/sewing-accessories/see-more-sewing-accessories/bias-tape-maker-set-5pack-assorted-colors/#sku=tool3500"/>               |
+  | Pattern Weights    | Surely you can be more creative than spending $10 on these.                                                       | <SmallPartnerLogo partner="amazon" product="3PYpTNX"/> | <SmallPartnerLogo partner="wawak" link="https://www.wawak.com/cutting-measuring/patterns-supplies/pattern-weights-4pack/#sku=tool40"/>                                                       |
+  | KAM Snap Kit       | Specialty tool to set colored plastic snaps into gear and apparel.                                                | <SmallPartnerLogo partner="amazon" product="3Oz7DK8"/> |                                                                                                                                                                                              |
+
+    ### Designing and Flat Patterning Gear and Apparel
+
+  |                            |                                                                                                                                 |                                                        |                                                                                                                                                     |
+  |----------------------------|---------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+  | Patterning Paper           | Dotted purpose-made patterning paper, 36" or 48" wide and 15# weight. Somewhat translucent and more durable than tracing paper. | <SmallPartnerLogo partner="amazon" product="3iFsLnS"/> | <SmallPartnerLogo partner="wawak" link="https://www.wawak.com/cutting-measuring/patterns-supplies/dotted-marking-15-pattern-paper-500/#sku=msc42"/> |
+  | See-Through Tailors Ruler  | See-through flexible ruler with 1/8" precision graduations. Perfect for drawing seam allowances.                                | <SmallPartnerLogo partner="amazon" product="3OAQv6B"/> | <SmallPartnerLogo partner="wawak" link="https://www.wawak.com/cutting-measuring/tapes-rulers/quilt-n-sew-see-thru-marking-ruler-18-x-2/#sku=ta27"/> |
+  | Mini Rotary Cutter         | 28mm paper cutter dedicated to not dull your fabric cutter. Small blades cut tight curves much easier.                          | <SmallPartnerLogo partner="amazon" product="3vhhIEE"/> | <SmallPartnerLogo partner="wawak" link="https://www.wawak.com/cutting-measuring/cutting/cutting-tools/olfa-rotary-cutters/#sku=cut2"/>              |
+  | Pattern Notcher            | Like a hole punch but specially made notcher for paper patterns.                                                                | <SmallPartnerLogo partner="amazon" product="3oA2KG5"/> | <SmallPartnerLogo partner="wawak" link="https://www.wawak.com/cutting-measuring/patterns-supplies/pattern-notcher/#sku=tool15"/>                    |
+  | L-square Ruler             | Fast and accurate squaring of guide lines.                                                                                      | <SmallPartnerLogo partner="amazon" product="3zDSSBp"/> | <SmallPartnerLogo partner="wawak" link="https://www.wawak.com/cutting-measuring/tapes-rulers/l-square-metal-tailor-ruler/#sku=ta45"/>               |
+  | Vary Form 24" Curve        | 24" curved ruler for sweeping smooth curves and shaped lines.                                                                   | <SmallPartnerLogo partner="amazon" product="3zDSJOn"/> | <SmallPartnerLogo partner="wawak" link="https://www.wawak.com/cutting-measuring/tapes-rulers/french-curve-metal-tailor-ruler-24/#sku=ta8"/>         |
+  | Vary Form French Curve     | 12" french curve for tighter curves and shapes.                                                                                 | <SmallPartnerLogo partner="amazon" product="3oCaW8U"/> |                                                                                                                                                     |
+  | Patternmaking for Menswear | My favorite flat patterning textbook found thus far.                                                                            | <SmallPartnerLogo partner="amazon" product="3PIxvV9"/> |                                                                                                                                                     |
+  | Pencil & Soft Erasers      | Precise mechanical pencil that easily erases and won't tear paper                                                               |                                                        |                                                                                                                                                     |
+
+
+  </DividedSection>
+
+  ---
+
+  <DividedSection header="Cricut Maker">
+    <Image src={import('@/images/shared/products/cricut-maker.webp')} width={225} class="float-right ml-2 rounded" alt="Cricut Maker"/>
+
+    With a digital workflow, its possible to go from design to cut panels without paper. Atleast for small projects,
+    that is. I get alot of questions about the Cricut Maker that I often show in videos and Instagram Stories. I address
+    many of your commonly asked questions on a [dedicated page](/article/circut).
+  </DividedSection>
+
+</Card>
